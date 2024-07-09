@@ -14,6 +14,16 @@ public class ModItem {
     public static final RegistryObject<Item> FLUPEL = ITEMS.register("flupel",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> MAKAR = ITEMS.register("makar",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> LYOSHA = ITEMS.register("lyosha",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> KAZIK = ITEMS.register("kazik",
+            () -> new Item(new Item.Properties()));
+
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

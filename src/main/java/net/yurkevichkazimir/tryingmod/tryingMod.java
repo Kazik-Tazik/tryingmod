@@ -53,6 +53,9 @@ public class tryingMod
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItem.FLUPEL);
+            event.accept(ModItem.KAZIK);
+            event.accept(ModItem.MAKAR);
+            event.accept(ModItem.LYOSHA);
         }
     }
 

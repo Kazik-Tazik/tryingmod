@@ -21,6 +21,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> CUM_BLOCK = registerBlock("cum_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK)));
 
+    public static final RegistryObject<Block> BAKED_CUM_BLOCK = registerBlock("baked_cum_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DRIED_KELP_BLOCK)));
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

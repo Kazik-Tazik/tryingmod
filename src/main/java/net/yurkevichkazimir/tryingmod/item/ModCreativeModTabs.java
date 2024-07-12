@@ -24,8 +24,11 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItem.KAZIK.get());
                         pOutput.accept(ModItem.MAKAR.get());
                         pOutput.accept(ModItem.LYOSHA.get());
+                        pOutput.accept(ModItem.PUDDLE_OF_CUM.get());
+                        pOutput.accept(ModItem.BAKED_CUM.get());
 
                         pOutput.accept(ModBlocks.CUM_BLOCK.get());
+                        pOutput.accept(ModBlocks.BAKED_CUM_BLOCK.get());
                     })
                     .build());
 

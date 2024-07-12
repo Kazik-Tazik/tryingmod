@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tryingmod:puddle_of_cum"
+    }
+  },
+  "result": {
+    "item": "tryingmod:cum_block"
+  }
+}

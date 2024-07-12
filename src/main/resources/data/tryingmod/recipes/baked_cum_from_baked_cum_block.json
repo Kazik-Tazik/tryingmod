@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "item": "tryingmod:baked_cum_block"
+    }
+  ],
+  "result": {
+    "item": "tryingmod:baked_cum",
+    "count": 9
+  }
+}

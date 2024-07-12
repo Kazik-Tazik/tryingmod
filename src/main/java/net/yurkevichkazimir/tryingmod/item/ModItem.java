@@ -23,6 +23,12 @@ public class ModItem {
     public static final RegistryObject<Item> KAZIK = ITEMS.register("kazik",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> PUDDLE_OF_CUM = ITEMS.register("puddle_of_cum",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> BAKED_CUM = ITEMS.register("baked_cum",
+                () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

@@ -29,6 +29,9 @@ public class ModItem {
     public static final RegistryObject<Item> BAKED_CUM = ITEMS.register("baked_cum",
                 () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> CHUGUNOK = ITEMS.register("chugunok",
+            () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

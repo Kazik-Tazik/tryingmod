@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "food",
+  "ingredients": [
+    {
+      "item": "tryingmod:cooked_pork_block"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cooked_porkchop",
+    "count": 9
+  }
+}

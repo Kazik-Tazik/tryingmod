@@ -6,11 +6,15 @@
   "item.tryingmod.puddle_of_cum": "Puddle of Cum",
   "item.tryingmod.baked_cum": "Baked Cum",
   "item.tryingmod.chugunok": "Chugunok",
+  "item.tryingmod.chugunok_stick": "Chugunok Stick",
+  "item.tryingmod.pig_maker_item": "Pig-Inator",
 
   "block.tryingmod.cum_block": "Block of Cum",
   "block.tryingmod.baked_cum_block": "Block of Baked Cum",
   "block.tryingmod.chugunok_block": "Chugunok Block",
   "block.tryingmod.chugunok_ore": "Chugunok Ore",
+  "block.tryingmod.pork_block": "Block of Pork",
+  "block.tryingmod.cooked_pork_block": "Block of Cooked Pork",
 
   "creativetab.trying_tab": "Trying Mod"
 

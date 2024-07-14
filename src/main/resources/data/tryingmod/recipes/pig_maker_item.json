@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " %@",
+    " #%",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "tryingmod:chugunok_stick"
+    },
+    "@": {
+      "item": "minecraft:nether_star"
+    },
+    "%": {
+      "item": "minecraft:porkchop"
+    }
+  },
+  "result": {
+    "item": "tryingmod:pig_maker_item"
+  }
+}

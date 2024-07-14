@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:porkchop"
+    }
+  },
+  "result": {
+    "item": "tryingmod:pork_block"
+  }
+}

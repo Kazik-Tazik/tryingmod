@@ -17,21 +17,12 @@ public class ModCreativeModTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, tryingMod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.FLUPEL.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.CHUGUNOK.get()))
                     .title(Component.translatable("creativetab.trying_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItem.FLUPEL.get());
-                        pOutput.accept(ModItem.KAZIK.get());
-                        pOutput.accept(ModItem.MAKAR.get());
-                        pOutput.accept(ModItem.LYOSHA.get());
-                        pOutput.accept(ModItem.PUDDLE_OF_CUM.get());
-                        pOutput.accept(ModItem.BAKED_CUM.get());
-                        pOutput.accept(ModItem.CHUGUNOK.get());
                         pOutput.accept(ModItem.CHUGUNOK_STICK.get());
                         pOutput.accept(ModItem.PIG_MAKER_ITEM.get());
 
-                        pOutput.accept(ModBlocks.CUM_BLOCK.get());
-                        pOutput.accept(ModBlocks.BAKED_CUM_BLOCK.get());
                         pOutput.accept(ModBlocks.CHUGUNOK_BLOCK.get());
                         pOutput.accept(ModBlocks.CHUGUNOK_ORE.get());
                         pOutput.accept(ModBlocks.PORK_BLOCK.get());

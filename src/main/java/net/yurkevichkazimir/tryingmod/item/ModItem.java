@@ -12,23 +12,6 @@ public class ModItem {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, tryingMod.MOD_ID);
 
-    public static final RegistryObject<Item> FLUPEL = ITEMS.register("flupel",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> MAKAR = ITEMS.register("makar",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> LYOSHA = ITEMS.register("lyosha",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> KAZIK = ITEMS.register("kazik",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> PUDDLE_OF_CUM = ITEMS.register("puddle_of_cum",
-            () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> BAKED_CUM = ITEMS.register("baked_cum",
-                () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CHUGUNOK = ITEMS.register("chugunok",
             () -> new Item(new Item.Properties()));

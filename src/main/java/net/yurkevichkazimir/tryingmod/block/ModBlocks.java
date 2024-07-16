@@ -18,12 +18,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, tryingMod.MOD_ID);
 
-    public static final RegistryObject<Block> CUM_BLOCK = registerBlock("cum_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK)));
-
-    public static final RegistryObject<Block> BAKED_CUM_BLOCK = registerBlock("baked_cum_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DRIED_KELP_BLOCK)));
-
     public static final RegistryObject<Block> CHUGUNOK_BLOCK = registerBlock("chugunok_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.NETHERITE_BLOCK)));
 
@@ -31,7 +25,7 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     public static final RegistryObject<Block> PORK_BLOCK = registerBlock("pork_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.ANVIL)));
 
     public static final RegistryObject<Block> COOKED_PORK_BLOCK = registerBlock("cooked_pork_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK)));

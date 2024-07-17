@@ -2,6 +2,7 @@ package net.yurkevichkazimir.tryingmod.item;
 
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
+import net.yurkevichkazimir.tryingmod.item.custom.FlyToSpaceItem;
 import net.yurkevichkazimir.tryingmod.item.custom.PigMakerItem;
 import net.yurkevichkazimir.tryingmod.tryingMod;
 import net.minecraft.world.item.Item;
@@ -21,6 +22,9 @@ public class ModItem {
 
     public static final RegistryObject<Item> PIG_MAKER_ITEM = ITEMS.register("pig_maker_item",
             () -> new PigMakerItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> FLY_TO_SPACE_ITEM = ITEMS.register("fly_to_space_item",
+            () -> new FlyToSpaceItem(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

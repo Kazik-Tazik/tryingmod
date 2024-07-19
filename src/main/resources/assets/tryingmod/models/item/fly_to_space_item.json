@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "tryingmod:item/fly_to_space_item"
-  }
-}

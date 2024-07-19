@@ -21,13 +21,14 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.trying_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItem.CHUGUNOK_STICK.get());
+                        pOutput.accept(ModItem.CHUGUNOK.get());
                         pOutput.accept(ModItem.PIG_MAKER_ITEM.get());
-                        pOutput.accept(ModItem.FLY_TO_SPACE_ITEM.get());
 
                         pOutput.accept(ModBlocks.CHUGUNOK_BLOCK.get());
                         pOutput.accept(ModBlocks.CHUGUNOK_ORE.get());
                         pOutput.accept(ModBlocks.PORK_BLOCK.get());
                         pOutput.accept(ModBlocks.COOKED_PORK_BLOCK.get());
+                        pOutput.accept(ModItem.DRANIKI.get());
 
                     })
                     .build());

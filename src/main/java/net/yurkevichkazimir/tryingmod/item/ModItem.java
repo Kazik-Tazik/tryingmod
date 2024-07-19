@@ -13,7 +13,6 @@ public class ModItem {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, tryingMod.MOD_ID);
 
-
     public static final RegistryObject<Item> CHUGUNOK = ITEMS.register("chugunok",
             () -> new Item(new Item.Properties()));
 
@@ -23,8 +22,9 @@ public class ModItem {
     public static final RegistryObject<Item> PIG_MAKER_ITEM = ITEMS.register("pig_maker_item",
             () -> new PigMakerItem(new Item.Properties()));
 
-    public static final RegistryObject<Item> FLY_TO_SPACE_ITEM = ITEMS.register("fly_to_space_item",
-            () -> new FlyToSpaceItem(new Item.Properties()));
+    public static final RegistryObject<Item> DRANIKI = ITEMS.register("draniki",
+            () -> new Item(new Item.Properties().food(ModFoods.DRANIKI)));
+
 
 
     public static void register(IEventBus eventBus){

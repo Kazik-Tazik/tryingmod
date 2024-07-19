@@ -18,7 +18,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
 import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
-import net.yurkevichkazimir.tryingmod.event.CommonEvents;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -43,7 +42,6 @@ public class tryingMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(CommonEvents.class);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

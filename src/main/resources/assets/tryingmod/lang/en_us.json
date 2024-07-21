@@ -1,9 +1,4 @@
 {
-  "item.tryingmod.flupel": "Flupel",
-  "item.tryingmod.kazik": "Kazik",
-  "item.tryingmod.makar": "Makar",
-  "item.tryingmod.lyosha": "Lyosha",
-  "item.tryingmod.puddle_of_cum": "Puddle of Cum",
   "item.tryingmod.baked_cum": "Baked Cum",
   "item.tryingmod.chugunok": "Chugunok",
   "item.tryingmod.chugunok_stick": "Chugunok Stick",
@@ -11,8 +6,7 @@
   "item.tryingmod.draniki": "Draniki",
   "item.tryingmod.twenty_four_hour_fuel": "24h fuel",
 
-  "block.tryingmod.cum_block": "Block of Cum",
-  "block.tryingmod.baked_cum_block": "Block of Baked Cum",
+
   "block.tryingmod.chugunok_block": "Chugunok Block",
   "block.tryingmod.chugunok_ore": "Chugunok Ore",
   "block.tryingmod.pork_block": "Block of Pork",

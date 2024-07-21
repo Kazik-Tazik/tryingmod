@@ -1,0 +1,16 @@
+{
+  "item.tryingmod.chugunok": "Чугунок",
+  "item.tryingmod.chugunok_stick": "Палка з чугунка",
+  "item.tryingmod.pig_maker_item": "Свінатар",
+  "item.tryingmod.draniki": "Дранікі",
+  "item.tryingmod.twenty_four_hour_fuel": "Паліва 24г",
+
+  "block.tryingmod.chugunok_block": "Блок Чугунка",
+  "block.tryingmod.chugunok_ore": "Руда чугунка",
+  "block.tryingmod.pork_block": "Блок з свініны",
+  "block.tryingmod.cooked_pork_block": "Блок смажанай свініны",
+
+  "creativetab.trying_tab": "Я СПРАБУЮ МОД"
+
+
+}

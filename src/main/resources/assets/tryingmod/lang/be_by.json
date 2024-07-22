@@ -10,6 +10,8 @@
   "block.tryingmod.pork_block": "Блок з свініны",
   "block.tryingmod.cooked_pork_block": "Блок смажанай свініны",
 
+  "tooltip.tryingmod.pig_maker_item.tooltip": "Ходзяць чуткі, што гэты прадмет ператварае ўсё ў... свіней?",
+
   "creativetab.trying_tab": "Я СПРАБУЮ МОД"
 
 

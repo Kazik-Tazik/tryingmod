@@ -28,6 +28,15 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.CHUGUNOK_BLOCK.get());
                         pOutput.accept(ModBlocks.CHUGUNOK_ORE.get());
                         pOutput.accept(ModBlocks.PORK_BLOCK.get());
+                        pOutput.accept(ModBlocks.PORK_STAIRS.get());
+                        pOutput.accept(ModBlocks.PORK_SLAB.get());
+                        pOutput.accept(ModBlocks.PORK_DOOR.get());
+                        pOutput.accept(ModBlocks.PORK_TRAPDOOR.get());
+                        pOutput.accept(ModBlocks.PORK_FENCE.get());
+                        pOutput.accept(ModBlocks.PORK_FENCE_GATE.get());
+                        pOutput.accept(ModBlocks.PORK_BUTTON.get());
+                        pOutput.accept(ModBlocks.PORK_PRESSURE_PLATE.get());
+                        pOutput.accept(ModBlocks.PORK_WALL.get());
                         pOutput.accept(ModBlocks.COOKED_PORK_BLOCK.get());
                         pOutput.accept(ModItem.DRANIKI.get());
 

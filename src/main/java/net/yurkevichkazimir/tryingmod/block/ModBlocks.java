@@ -1,10 +1,12 @@
 package net.yurkevichkazimir.tryingmod.block;
 
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -25,10 +27,41 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3f).requiresCorrectToolForDrops(), UniformInt.of(3, 6)));
 
     public static final RegistryObject<Block> PORK_BLOCK = registerBlock("pork_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.ANVIL)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK)));
+
+    public static final RegistryObject<Block> PORK_STAIRS = registerBlock("pork_stairs",
+            () -> new StairBlock(() -> ModBlocks.PORK_BLOCK.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK)));
+
+    public static final RegistryObject<Block> PORK_SLAB = registerBlock("pork_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK)));
+
+    public static final RegistryObject<Block> PORK_BUTTON = registerBlock("pork_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON).sound(SoundType.SLIME_BLOCK),
+                    BlockSetType.IRON, 10, true));
+
+    public static final RegistryObject<Block> PORK_PRESSURE_PLATE = registerBlock("pork_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK),
+                    BlockSetType.IRON));
+
+    public static final RegistryObject<Block> PORK_FENCE = registerBlock("pork_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK)));
+
+    public static final RegistryObject<Block> PORK_FENCE_GATE = registerBlock("pork_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK),
+                    SoundEvents.ANVIL_PLACE, SoundEvents.ANVIL_DESTROY));
+
+    public static final RegistryObject<Block> PORK_WALL = registerBlock("pork_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK)));
+
+    public static final RegistryObject<Block> PORK_DOOR = registerBlock("pork_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK).noOcclusion(), BlockSetType.STONE));
+
+    public static final RegistryObject<Block> PORK_TRAPDOOR = registerBlock("pork_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK).noOcclusion(), BlockSetType.STONE));
 
     public static final RegistryObject<Block> COOKED_PORK_BLOCK = registerBlock("cooked_pork_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK)));
+
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {

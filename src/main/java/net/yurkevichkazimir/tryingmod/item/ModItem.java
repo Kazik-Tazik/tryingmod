@@ -17,10 +17,10 @@ public class ModItem {
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> CHUGUNOK_STICK = ITEMS.register("chugunok_stick",
-            () -> new PigMakerItem(new Item.Properties().durability(10)));
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> PIG_MAKER_ITEM = ITEMS.register("pig_maker_item",
-            () -> new PigMakerItem(new Item.Properties()));
+            () -> new PigMakerItem(new Item.Properties().durability(10)));
 
     public static final RegistryObject<Item> DRANIKI = ITEMS.register("draniki",
             () -> new Item(new Item.Properties().food(ModFoods.DRANIKI)));

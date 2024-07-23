@@ -30,6 +30,20 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.PORK_BLOCK.get());
         dropSelf(ModBlocks.COOKED_PORK_BLOCK.get());
 
+        dropSelf(ModBlocks.PORK_STAIRS.get());
+        dropSelf(ModBlocks.PORK_BUTTON.get());
+        dropSelf(ModBlocks.PORK_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.PORK_FENCE_GATE.get());
+        dropSelf(ModBlocks.PORK_WALL.get());
+        dropSelf(ModBlocks.PORK_FENCE.get());
+        dropSelf(ModBlocks.PORK_TRAPDOOR.get());
+
+        this.add(ModBlocks.PORK_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PORK_SLAB.get()));
+
+        this.add(ModBlocks.PORK_DOOR.get(),
+                block -> createDoorTable(ModBlocks.PORK_DOOR.get()));
+
         this.add(ModBlocks.CHUGUNOK_ORE.get(),
                 block -> createOreDrop(ModBlocks.CHUGUNOK_ORE.get(), ModItem.CHUGUNOK.get()));
     }

@@ -104,6 +104,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItem.CHUGUNOK_STICK.get())
                 .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
                 .save(pWriter);
+
     }
 
 

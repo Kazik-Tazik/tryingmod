@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "tryingmod:block/pork_door_bottom",
+    "top": "tryingmod:block/pork_door_top"
+  }
+}

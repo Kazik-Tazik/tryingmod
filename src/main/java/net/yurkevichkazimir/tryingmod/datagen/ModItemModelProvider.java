@@ -28,6 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItem.DRANIKI);
 
         handheldItem(ModItem.CHUGUNOK_STICK);
+        handheldItem(ModItem.PORKCHOP_PICKAXE);
 
         simpleBlockItem(ModBlocks.PORK_DOOR);
         evenSimplerBlockItem(ModBlocks.PORK_STAIRS);

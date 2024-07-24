@@ -29,7 +29,6 @@ public class ModItem {
             () -> new FuelItem(new Item.Properties(), 1728000));
 
 
-
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

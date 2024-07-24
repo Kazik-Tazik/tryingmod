@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "tryingmod:block/pork_block",
+    "side": "tryingmod:block/pork_block",
+    "top": "tryingmod:block/pork_block"
+  }
+}

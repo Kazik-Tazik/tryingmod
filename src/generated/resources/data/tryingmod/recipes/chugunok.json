@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tryingmod:chugunok_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "tryingmod:chugunok"
+  }
+}

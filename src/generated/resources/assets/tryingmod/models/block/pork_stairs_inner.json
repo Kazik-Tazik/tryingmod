@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "tryingmod:block/pork_block",
+    "side": "tryingmod:block/pork_block",
+    "top": "tryingmod:block/pork_block"
+  }
+}

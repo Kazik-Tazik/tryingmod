@@ -12,6 +12,7 @@ public class ModTags {
     public static class Blocks {
 
         public static final TagKey<Block> VALUABLES = tag("valuables");
+        public static final TagKey<Block> NEED_PORKCHOP_TOOL = tag("need_porkchop_tool");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(tryingMod.MOD_ID, name));

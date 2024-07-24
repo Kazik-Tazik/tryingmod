@@ -1,0 +1,77 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "tryingmod:item/pig_maker_item_3d",
+		"particle": "tryingmod:item/pig_maker_item_3d"
+	},
+	"elements": [
+		{
+			"name": "handle",
+			"from": [7.4, 0, 7.5],
+			"to": [8.4, 10, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 7]},
+			"faces": {
+				"north": {"uv": [6, 0, 6.5, 5], "texture": "#0"},
+				"east": {"uv": [2, 6, 2.5, 11], "texture": "#0"},
+				"south": {"uv": [2.5, 6, 3, 11], "texture": "#0"},
+				"west": {"uv": [3, 6, 3.5, 11], "texture": "#0"},
+				"up": {"uv": [4, 6.5, 3.5, 6], "texture": "#0"},
+				"down": {"uv": [4.5, 6, 4, 6.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "head",
+			"from": [6, 10, 4],
+			"to": [10, 14, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 10, 7]},
+			"faces": {
+				"north": {"uv": [2, 4, 4, 6], "texture": "#0"},
+				"east": {"uv": [0, 0, 4, 2], "texture": "#0"},
+				"south": {"uv": [4, 4, 6, 6], "texture": "#0"},
+				"west": {"uv": [0, 2, 4, 4], "texture": "#0"},
+				"up": {"uv": [2, 8, 0, 4], "texture": "#0"},
+				"down": {"uv": [6, 0, 4, 4], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 180, 0],
+			"translation": [0, 3.5, 1]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 3.5, 1]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 180, 0],
+			"translation": [0, 1.25, -1.5]
+		},
+		"firstperson_lefthand": {
+			"translation": [0, 1.25, -1.5]
+		},
+		"ground": {
+			"rotation": [0, 0, 90],
+			"translation": [0, -1.5, 0]
+		},
+		"gui": {
+			"rotation": [0, -90, 0],
+			"translation": [0, 0.5, 0]
+		},
+		"head": {
+			"translation": [0, -0.75, 0]
+		},
+		"fixed": {
+			"rotation": [0, 90, 0],
+			"translation": [0, 0, -0.75]
+		}
+	},
+	"groups": [
+		{
+			"name": "pig_maker_item",
+			"origin": [7, 10, 7],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

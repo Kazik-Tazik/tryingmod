@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "tryingmod:item/pig_maker_item"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "tryingmod:item/pig_maker_item_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "tryingmod:item/pig_maker_item_2d"
+    },
+    "ground": {
+      "parent": "tryingmod:item/pig_maker_item_2d"
+    },
+    "fixed": {
+      "parent": "tryingmod:item/pig_maker_item_2d"
+    }
+  }
+}

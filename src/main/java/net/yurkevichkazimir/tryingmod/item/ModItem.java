@@ -1,7 +1,9 @@
 package net.yurkevichkazimir.tryingmod.item;
 
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
+import net.yurkevichkazimir.tryingmod.block.ModBlocks;
 import net.yurkevichkazimir.tryingmod.item.custom.FuelItem;
 import net.yurkevichkazimir.tryingmod.item.custom.PigMakerItem;
 import net.yurkevichkazimir.tryingmod.tryingMod;
@@ -27,6 +29,9 @@ public class ModItem {
 
     public static final RegistryObject<Item> TWENTY_FOUR_HOUR_FUEL = ITEMS.register("twenty_four_hour_fuel",
             () -> new FuelItem(new Item.Properties(), 1728000));
+
+    public static final RegistryObject<Item> PIG_SEEDS = ITEMS.register("pig_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.PIG_CROP.get(), new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

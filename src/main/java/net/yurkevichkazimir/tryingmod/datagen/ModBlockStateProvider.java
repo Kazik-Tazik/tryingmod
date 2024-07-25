@@ -1,12 +1,18 @@
 package net.yurkevichkazimir.tryingmod.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
+import net.yurkevichkazimir.tryingmod.block.custom.PigCropBlock;
 import net.yurkevichkazimir.tryingmod.tryingMod;
+
+import java.util.function.Function;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -33,7 +39,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(((DoorBlock) ModBlocks.PORK_DOOR.get()), modLoc("block/pork_door_bottom"), modLoc("block/pork_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.PORK_TRAPDOOR.get()), modLoc("block/pork_trapdoor"), true, "cutout");
 
+        makePigCrop((CropBlock) ModBlocks.PIG_CROP.get(), "pig_crop_stage", "pig_crop_stage");
     }
+
+    public void makePigCrop(CropBlock block, String modelName, String textureName) {
+        Function<BlockState, ConfiguredModel[]> function = state -> strawberryStates(state, block, modelName, textureName);
+
+        getVariantBuilder(block).forAllStates(function);
+    }
+
+    private ConfiguredModel[] strawberryStates(BlockState state, CropBlock block, String modelName, String textureName) {
+        ConfiguredModel[] models = new ConfiguredModel[1];
+        models[0] = new ConfiguredModel(models().crop(modelName + state.getValue(((PigCropBlock) block).getAgeProperty()),
+                new ResourceLocation(tryingMod.MOD_ID, "block/" + textureName + state.getValue(((PigCropBlock) block).getAgeProperty()))).renderType("cutout"));
+        return models;
+    }
+
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));

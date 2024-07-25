@@ -1,7 +1,8 @@
-// 1.20.1	2024-07-23T19:11:40.2005203	Loot Tables
+// 1.20.1	2024-07-25T19:52:42.5784708	Loot Tables
 4c4bb02155dd2565d03cd9cff8701397bafc9624 data/tryingmod/loot_tables/blocks/chugunok_block.json
 96f10a6e63e9923818740bf6a99ec2c0a45ee7b5 data/tryingmod/loot_tables/blocks/chugunok_ore.json
 d5f2a7d99cab2f3e27e93c5faf0e6372fc03d584 data/tryingmod/loot_tables/blocks/cooked_pork_block.json
+9522bfedbe22fcdaf6e9bb548f20cf28518dcc22 data/tryingmod/loot_tables/blocks/pig_crop.json
 0060df6c4968c58023a6486e2e47e6f9faa2aec8 data/tryingmod/loot_tables/blocks/pork_block.json
 8f9101ce29b738c1b8e9a3bbae492bf8694b5dae data/tryingmod/loot_tables/blocks/pork_button.json
 f8936094ccd6882219f802b38da54b3834fd0504 data/tryingmod/loot_tables/blocks/pork_door.json

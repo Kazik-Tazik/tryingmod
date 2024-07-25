@@ -24,7 +24,6 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItem.CHUGUNOK.get());
                         pOutput.accept(ModItem.PIG_MAKER_ITEM.get());
                         pOutput.accept(ModItem.TWENTY_FOUR_HOUR_FUEL.get());
-                        pOutput.accept(ModItem.PORKCHOP_PICKAXE.get());
 
                         pOutput.accept(ModBlocks.CHUGUNOK_BLOCK.get());
                         pOutput.accept(ModBlocks.CHUGUNOK_ORE.get());
@@ -40,6 +39,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.PORK_WALL.get());
                         pOutput.accept(ModBlocks.COOKED_PORK_BLOCK.get());
                         pOutput.accept(ModItem.DRANIKI.get());
+                        pOutput.accept(ModItem.PIG_SEEDS.get());
+
 
                     })
                     .build());

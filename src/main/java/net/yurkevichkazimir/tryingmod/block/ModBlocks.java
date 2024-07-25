@@ -11,6 +11,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.yurkevichkazimir.tryingmod.block.custom.PigCropBlock;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 import net.yurkevichkazimir.tryingmod.tryingMod;
 
@@ -61,6 +62,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COOKED_PORK_BLOCK = registerBlock("cooked_pork_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK).sound(SoundType.SLIME_BLOCK)));
+
+    public static final RegistryObject<Block> PIG_CROP = BLOCKS.register("pig_crop",
+            () -> new PigCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noOcclusion().noCollission()));
 
 
 

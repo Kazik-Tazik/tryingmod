@@ -1,5 +1,6 @@
 package net.yurkevichkazimir.tryingmod.datagen.loot;
 
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
@@ -11,9 +12,12 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.registries.RegistryObject;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
+import net.yurkevichkazimir.tryingmod.block.custom.PigCropBlock;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 
 import java.util.Set;
@@ -46,7 +50,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.CHUGUNOK_ORE.get(),
                 block -> createOreDrop(ModBlocks.CHUGUNOK_ORE.get(), ModItem.CHUGUNOK.get()));
+
+        LootItemCondition.Builder lootitemcondition$builder = LootItemBlockStatePropertyCondition
+                .hasBlockStateProperties(ModBlocks.PIG_CROP.get())
+                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(PigCropBlock.AGE, 5));
+
+        this.add(ModBlocks.PIG_CROP.get(), createCropDrops(ModBlocks.PIG_CROP.get(), Items.PORKCHOP,
+                ModItem.PIG_SEEDS.get(), lootitemcondition$builder));
     }
+
 
     protected LootTable.Builder createCopperLikeOreDrops(Block pBlock, Item item) {
         return createSilkTouchDispatchTable(pBlock,

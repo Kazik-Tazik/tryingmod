@@ -105,6 +105,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.NETHER_STAR), has(Items.NETHER_STAR))
                 .save(pWriter);
 
+        //Pork seeds
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.FOOD, ModItem.PIG_SEEDS.get(), 1)
+                .requires(Items.PORKCHOP)
+                .unlockedBy(getHasName(Items.PORKCHOP), has(Items.PORKCHOP))
+                .save(pWriter);
     }
 
 

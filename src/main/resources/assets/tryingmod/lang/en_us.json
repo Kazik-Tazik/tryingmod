@@ -23,6 +23,8 @@
 
   "block.tryingmod.cooked_pork_block": "Block of Cooked Pork",
 
+  "entity.minecraft.villager.tryingmod.porkmaster": "Pork Master",
+
 
   "tooltip.tryingmod.pig_maker_item.tooltip": "Rumors are saying that this item makes anything go... pig?",
 

@@ -9,8 +9,19 @@
   "block.tryingmod.chugunok_ore": "Руда чугунка",
   "block.tryingmod.pork_block": "Блок з свініны",
   "block.tryingmod.cooked_pork_block": "Блок смажанай свініны",
+  "block.tryingmod.pork_stairs": "Свінныя прыступкі",
+  "block.tryingmod.pork_slab": "Свінная пліта",
+  "block.tryingmod.pork_button": "Свінная кнопка",
+  "block.tryingmod.pork_pressure_plate": "Свінная націсная пліта (лёгкая)",
+  "block.tryingmod.pork_fence": "Свінны плот",
+  "block.tryingmod.pork_fence_gate": "Свінная брамка",
+  "block.tryingmod.pork_wall": "Сцяна з свінні",
+  "block.tryingmod.pork_door": "Свінныя Дзверы",
+  "block.tryingmod.pork_trapdoor": "Свінны люк",
 
   "tooltip.tryingmod.pig_maker_item.tooltip": "Ходзяць чуткі, што гэты прадмет ператварае ўсё ў... свіней?",
+
+  "entity.minecraft.villager.tryingmod.porkmaster": "Хахлінка",
 
   "creativetab.trying_tab": "Я СПРАБУЮ МОД"
 

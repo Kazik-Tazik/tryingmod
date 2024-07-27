@@ -1,9 +1,11 @@
 package net.yurkevichkazimir.tryingmod.item;
 
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
+import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.item.custom.FuelItem;
 import net.yurkevichkazimir.tryingmod.item.custom.PigMakerItem;
 import net.yurkevichkazimir.tryingmod.tryingMod;
@@ -32,6 +34,10 @@ public class ModItem {
 
     public static final RegistryObject<Item> PIG_SEEDS = ITEMS.register("pig_seeds",
             () -> new ItemNameBlockItem(ModBlocks.PIG_CROP.get(), new Item.Properties()));
+
+    public static final RegistryObject<Item> KAMIZELKA_SPAWN_EGG = ITEMS.register("kamizelka_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.KAMIZELKA, 0x58be3c, 0xc9be26,
+                    new Item.Properties()));
 
 
     public static void register(IEventBus eventBus){

@@ -27,6 +27,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItem.TWENTY_FOUR_HOUR_FUEL);
         simpleItem(ModItem.DRANIKI);
         simpleItem(ModItem.PIG_SEEDS);
+        withExistingParent(ModItem.KAMIZELKA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         handheldItem(ModItem.CHUGUNOK_STICK);
 
@@ -40,6 +41,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.PORK_BUTTON, ModBlocks.PORK_BLOCK);
         wallItem(ModBlocks.PORK_WALL, ModBlocks.PORK_BLOCK);
         trapdoorItem(ModBlocks.PORK_TRAPDOOR);
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

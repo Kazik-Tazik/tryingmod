@@ -3,6 +3,7 @@ package net.yurkevichkazimir.tryingmod.entity.custom;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.entity.monster.AbstractSkeleton;
+import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.piglin.AbstractPiglin;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.minecraft.server.level.ServerLevel;
@@ -73,7 +74,7 @@ public class KamizelkaEntity extends Animal {
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 5f));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
 
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Pig.class, false));
+        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Spider.class, false));
 
     }
 
@@ -83,9 +84,9 @@ public class KamizelkaEntity extends Animal {
                 .add(Attributes.FOLLOW_RANGE, 24D)
                 .add(Attributes.MOVEMENT_SPEED, 0.3D)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.01f)
-                .add(Attributes.ATTACK_DAMAGE, 1.0)
+                .add(Attributes.ATTACK_DAMAGE, 4.0)
                 .add(Attributes.ATTACK_KNOCKBACK, 1.0)
-                .add(Attributes.ATTACK_SPEED, 2.0);
+                .add(Attributes.ATTACK_SPEED, 5.0);
     }
 
     @Nullable

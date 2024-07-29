@@ -12,5 +12,6 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.KAMIZELKA.get(), KamizelkaEntity.createAttributes().build());
+        event.put(ModEntities.ZUFIK.get(), KamizelkaEntity.createAttributes().build());
     }
 }

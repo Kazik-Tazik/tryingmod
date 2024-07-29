@@ -19,6 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.entity.client.KamizelkaRenderer;
+import net.yurkevichkazimir.tryingmod.entity.client.ZufikRenderer;
 import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 import net.yurkevichkazimir.tryingmod.villager.ModVillagers;
@@ -62,8 +63,9 @@ public class tryingMod
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-
+        if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS){
+            event.accept(ModItem.KAMIZELKA_SPAWN_EGG);
+            event.accept(ModItem.ZUFIK_SPAWN_EGG);
         }
     }
 
@@ -80,6 +82,7 @@ public class tryingMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.KAMIZELKA.get(), KamizelkaRenderer::new);
+            EntityRenderers.register(ModEntities.ZUFIK.get(), ZufikRenderer::new);
         }
     }
 }

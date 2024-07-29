@@ -28,6 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItem.DRANIKI);
         simpleItem(ModItem.PIG_SEEDS);
         withExistingParent(ModItem.KAMIZELKA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItem.ZUFIK_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         handheldItem(ModItem.CHUGUNOK_STICK);
 

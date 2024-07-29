@@ -1,5 +1,6 @@
 package net.yurkevichkazimir.tryingmod.entity;
 
+import net.yurkevichkazimir.tryingmod.entity.custom.ZufikEntity;
 import net.yurkevichkazimir.tryingmod.tryingMod;
 import net.yurkevichkazimir.tryingmod.entity.custom.KamizelkaEntity;
 import net.minecraft.world.entity.EntityType;
@@ -16,6 +17,11 @@ public class ModEntities {
     public static final RegistryObject<EntityType<KamizelkaEntity>> KAMIZELKA =
             ENTITY_TYPES.register("kamizelka", () -> EntityType.Builder.of(KamizelkaEntity::new, MobCategory.CREATURE)
                     .sized(1f, 1.1f).build("kamizelka"));
+
+    public static final RegistryObject<EntityType<ZufikEntity>> ZUFIK =
+            ENTITY_TYPES.register("zufik", () -> EntityType.Builder.of(ZufikEntity::new, MobCategory.CREATURE)
+                    .sized(1f, 3f).build("zufik"));
+
 
 
     public static void register(IEventBus eventBus) {

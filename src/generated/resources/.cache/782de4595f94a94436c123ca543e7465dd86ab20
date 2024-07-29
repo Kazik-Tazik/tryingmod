@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-27T14:21:46.8605679	Item Models: tryingmod
+// 1.20.1	2024-07-29T18:11:08.5791199	Item Models: tryingmod
 fffe25e5c48af217c55359759c6a48ecc3cac304 assets/tryingmod/models/item/chugunok.json
 1866de234240ffc1f053bcef08ec2a8cdacf9ddb assets/tryingmod/models/item/chugunok_stick.json
 a5f59be2acf6304472c81fcaf7adb0501034b779 assets/tryingmod/models/item/draniki.json
@@ -14,3 +14,4 @@ a1ef74a0037122a90c60a03a2b0eb380043306c2 assets/tryingmod/models/item/pork_stair
 15efa916392f5481541ebf35165da982499f251e assets/tryingmod/models/item/pork_trapdoor.json
 5aea7d476628efe3d8825bc28f7142b050bcc639 assets/tryingmod/models/item/pork_wall.json
 300cdc581861682c1452cb2f9efc5314c39558e0 assets/tryingmod/models/item/twenty_four_hour_fuel.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tryingmod/models/item/zufik_spawn_egg.json

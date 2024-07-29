@@ -1,5 +1,6 @@
 package net.yurkevichkazimir.tryingmod.event;
 
+import net.yurkevichkazimir.tryingmod.entity.client.ZufikModel;
 import net.yurkevichkazimir.tryingmod.tryingMod;
 import net.yurkevichkazimir.tryingmod.entity.client.ModModelLayers;
 import net.yurkevichkazimir.tryingmod.entity.client.KamizelkaModel;
@@ -13,5 +14,6 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.KAMIZELKA_LAYER, KamizelkaModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.ZUFIK_LAYER, ZufikModel::createBodyLayer);
     }
 }

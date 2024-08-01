@@ -1,5 +1,6 @@
 package net.yurkevichkazimir.tryingmod.entity;
 
+import net.yurkevichkazimir.tryingmod.entity.custom.BinhliEntity;
 import net.yurkevichkazimir.tryingmod.entity.custom.ZufikEntity;
 import net.yurkevichkazimir.tryingmod.tryingMod;
 import net.yurkevichkazimir.tryingmod.entity.custom.KamizelkaEntity;
@@ -22,6 +23,9 @@ public class ModEntities {
             ENTITY_TYPES.register("zufik", () -> EntityType.Builder.of(ZufikEntity::new, MobCategory.CREATURE)
                     .sized(1f, 3f).build("zufik"));
 
+    public static final RegistryObject<EntityType<BinhliEntity>> BINHLI =
+            ENTITY_TYPES.register("binhli", () -> EntityType.Builder.of(BinhliEntity::new, MobCategory.CREATURE)
+                    .sized(1f, 3f).build("binhli"));
 
 
     public static void register(IEventBus eventBus) {

@@ -13,5 +13,6 @@ public class ModEventBusEvents {
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.KAMIZELKA.get(), KamizelkaEntity.createAttributes().build());
         event.put(ModEntities.ZUFIK.get(), KamizelkaEntity.createAttributes().build());
+        event.put(ModEntities.BINHLI.get(), KamizelkaEntity.createAttributes().build());
     }
 }

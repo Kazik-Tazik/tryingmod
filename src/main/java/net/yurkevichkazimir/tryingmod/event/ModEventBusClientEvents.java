@@ -15,5 +15,6 @@ public class ModEventBusClientEvents {
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.KAMIZELKA_LAYER, KamizelkaModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.ZUFIK_LAYER, ZufikModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.BINHLI_LAYER, ZufikModel::createBodyLayer);
     }
 }

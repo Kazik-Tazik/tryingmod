@@ -1,5 +1,6 @@
 package net.yurkevichkazimir.tryingmod.event;
 
+import net.yurkevichkazimir.tryingmod.entity.custom.BinhliEntity;
 import net.yurkevichkazimir.tryingmod.tryingMod;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.entity.custom.KamizelkaEntity;
@@ -13,6 +14,6 @@ public class ModEventBusEvents {
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.KAMIZELKA.get(), KamizelkaEntity.createAttributes().build());
         event.put(ModEntities.ZUFIK.get(), KamizelkaEntity.createAttributes().build());
-        event.put(ModEntities.BINHLI.get(), KamizelkaEntity.createAttributes().build());
+        event.put(ModEntities.BINHLI.get(), BinhliEntity.createAttributes().build());
     }
 }

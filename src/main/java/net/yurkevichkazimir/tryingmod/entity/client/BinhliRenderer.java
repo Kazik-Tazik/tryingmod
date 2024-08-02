@@ -10,14 +10,14 @@ import net.yurkevichkazimir.tryingmod.tryingMod;
 
 public class BinhliRenderer extends MobRenderer<BinhliEntity, BinhliModel<BinhliEntity>> {
     public BinhliRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new BinhliModel<>(pContext.bakeLayer(ModModelLayers.BINHLI_LAYER)), 0.7f);
+        super(pContext, new BinhliModel<>(pContext.bakeLayer(ModModelLayers.BINHLI_LAYER)), 0.5f);
     }
 
     @Override
     public void render(BinhliEntity pEntity, float pEntityYaw, float pPartialTicks, PoseStack pMatrixStack,
                        MultiBufferSource pBuffer, int pPackedLight) {
         if(pEntity.isBaby()) {
-            pMatrixStack.scale(0.7f, 0.7f, 0.7f);
+            pMatrixStack.scale(0.6f, 0.6f, 0.6f);
         }
 
         super.render(pEntity, pEntityYaw, pPartialTicks, pMatrixStack, pBuffer, pPackedLight);

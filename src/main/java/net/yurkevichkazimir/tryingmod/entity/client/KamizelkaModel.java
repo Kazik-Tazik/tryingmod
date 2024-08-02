@@ -11,7 +11,7 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
-import net.yurkevichkazimir.tryingmod.entity.animations.ModAnimationDefinitions;
+import net.yurkevichkazimir.tryingmod.entity.animations.ModKamizelkaAnimationDefinitions;
 import net.yurkevichkazimir.tryingmod.entity.custom.KamizelkaEntity;
 
 public class KamizelkaModel<T extends Entity> extends HierarchicalModel<T> {
@@ -67,9 +67,9 @@ public class KamizelkaModel<T extends Entity> extends HierarchicalModel<T> {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
-		this.animateWalk(ModAnimationDefinitions.KAMIZELKA_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-		this.animate(KamizelkaEntity.idleAnimationState, ModAnimationDefinitions.KAMIZELKA_IDLE, ageInTicks, 1f);
-		this.animate(((KamizelkaEntity) entity).attackAnimationState, ModAnimationDefinitions.KAMIZELKA_ATTACK, ageInTicks, 1f);
+		this.animateWalk(ModKamizelkaAnimationDefinitions.KAMIZELKA_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
+		this.animate(KamizelkaEntity.idleAnimationState, ModKamizelkaAnimationDefinitions.KAMIZELKA_IDLE, ageInTicks, 1f);
+		this.animate(((KamizelkaEntity) entity).attackAnimationState, ModKamizelkaAnimationDefinitions.KAMIZELKA_ATTACK, ageInTicks, 1f);
 
 	}
 
@@ -78,7 +78,7 @@ public class KamizelkaModel<T extends Entity> extends HierarchicalModel<T> {
 		pHeadPitch = Mth.clamp(pHeadPitch, -25.0F, 45.0F);
 
 		this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180F);
-		this.head.xRot = pHeadPitch * ((float)Math.PI / 180F);
+		this.head.xRot = pHeadPitch * ((float)Math.PI / 90F);
 	}
 
 	@Override

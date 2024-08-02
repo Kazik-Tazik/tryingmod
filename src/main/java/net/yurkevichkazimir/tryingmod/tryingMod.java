@@ -18,6 +18,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
+import net.yurkevichkazimir.tryingmod.entity.client.BinhliRenderer;
 import net.yurkevichkazimir.tryingmod.entity.client.KamizelkaRenderer;
 import net.yurkevichkazimir.tryingmod.entity.client.ZufikRenderer;
 import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
@@ -83,6 +84,7 @@ public class tryingMod
         public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.KAMIZELKA.get(), KamizelkaRenderer::new);
             EntityRenderers.register(ModEntities.ZUFIK.get(), ZufikRenderer::new);
+            EntityRenderers.register(ModEntities.BINHLI.get(), BinhliRenderer::new);
         }
     }
 }

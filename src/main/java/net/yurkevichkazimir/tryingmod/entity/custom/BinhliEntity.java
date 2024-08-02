@@ -27,23 +27,9 @@ public class BinhliEntity extends Animal {
     public BinhliEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
-    private static final EntityDataAccessor<Boolean> ATTACKING =
-            SynchedEntityData.defineId(BinhliEntity.class, EntityDataSerializers.BOOLEAN);
 
     public static final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
-
-    public final AnimationState attackAnimationState = new AnimationState();
-    public int attackAnimationTimeout = 0;
-
-    @Override
-    public void tick() {
-        super.tick();
-
-        if(this.level().isClientSide()) {
-            setupAnimationStates();
-        }
-    }
 
     private void setupAnimationStates() {
         if(this.idleAnimationTimeout <= 0) {
@@ -51,16 +37,6 @@ public class BinhliEntity extends Animal {
             this.idleAnimationState.start(this.tickCount);
         } else {
             --this.idleAnimationTimeout;
-        }
-        if(this.isAttacking() && attackAnimationTimeout <= 0) {
-            attackAnimationTimeout = 5; // Length in ticks of your animation
-            attackAnimationState.start(this.tickCount);
-        } else {
-            --this.attackAnimationTimeout;
-        }
-
-        if(!this.isAttacking()) {
-            attackAnimationState.stop();
         }
     }
 
@@ -76,19 +52,16 @@ public class BinhliEntity extends Animal {
         this.walkAnimation.update(f, 0.2f);
     }
 
-    public void setAttacking(boolean attacking) {
-        this.entityData.set(ATTACKING, attacking);
-    }
-
-    public boolean isAttacking() {
-        return this.entityData.get(ATTACKING);
-    }
 
     @Override
-    protected void defineSynchedData() {
-        super.defineSynchedData();
-        this.entityData.define(ATTACKING, false);
+    public void tick() {
+        super.tick();
+
+        if(this.level().isClientSide()) {
+            setupAnimationStates();
+        }
     }
+
 
     @Override
     protected void registerGoals() {

@@ -25,7 +25,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<BinhliEntity>> BINHLI =
             ENTITY_TYPES.register("binhli", () -> EntityType.Builder.of(BinhliEntity::new, MobCategory.CREATURE)
-                    .sized(1f, 3f).build("binhli"));
+                    .sized(1.2f, 2f).build("binhli"));
 
 
     public static void register(IEventBus eventBus) {

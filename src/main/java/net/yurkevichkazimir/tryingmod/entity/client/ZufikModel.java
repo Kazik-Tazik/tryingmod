@@ -11,7 +11,6 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
-import net.yurkevichkazimir.tryingmod.entity.animations.ModAnimationDefinitions;
 import net.yurkevichkazimir.tryingmod.entity.animations.ModZufikAnimationDefinition;
 import net.yurkevichkazimir.tryingmod.entity.custom.ZufikEntity;
 

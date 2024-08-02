@@ -43,6 +43,10 @@ public class ModItem {
             () -> new ForgeSpawnEggItem(ModEntities.ZUFIK, 0x791f7f, 0x2a0b2d,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> BINHLI_SPAWN_EGG = ITEMS.register("binhli_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.BINHLI, 0x784d19, 0x1a1105,
+                    new Item.Properties()));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

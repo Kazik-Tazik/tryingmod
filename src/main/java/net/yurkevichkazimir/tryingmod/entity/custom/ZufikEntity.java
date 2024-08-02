@@ -57,7 +57,7 @@ public class ZufikEntity extends Animal {
     protected void updateWalkAnimation(float pPartialTick) {
         float f;
         if(this.getPose() == Pose.STANDING) {
-            f = Math.min(pPartialTick * 6F, 1f);
+            f = Math.min(pPartialTick * 2F, 1f);
         } else {
             f = 0f;
         }

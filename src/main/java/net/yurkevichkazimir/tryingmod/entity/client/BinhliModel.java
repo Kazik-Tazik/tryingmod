@@ -12,18 +12,18 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.yurkevichkazimir.tryingmod.entity.animations.ModBinhliAnimationDefinitions;
+import net.yurkevichkazimir.tryingmod.entity.animations.ModKamizelkaAnimationDefinitions;
 import net.yurkevichkazimir.tryingmod.entity.custom.BinhliEntity;
+import net.yurkevichkazimir.tryingmod.entity.custom.KamizelkaEntity;
 
 public class BinhliModel<T extends Entity> extends HierarchicalModel<T> {
 
 	private final ModelPart binhli;
 	private final ModelPart head;
 
-
 	public BinhliModel(ModelPart root) {
 		this.binhli = root.getChild("binhli");
 		this.head = binhli.getChild("full_body").getChild("body").getChild("head");
-
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -54,7 +54,7 @@ public class BinhliModel<T extends Entity> extends HierarchicalModel<T> {
 
 		PartDefinition cube_r3 = mouth.addOrReplaceChild("cube_r3", CubeListBuilder.create().texOffs(0, 25).addBox(-9.0F, -7.0F, 0.0F, 19.0F, 7.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-2.0F, -19.0F, -6.0F, 0.0F, 0.0F, 0.0785F));
 
-		PartDefinition left_eye = head.addOrReplaceChild("left_eye", CubeListBuilder.create().texOffs(48, 9).addBox(-1.0F, -29.0F, -6.0F, 8.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -3.0F, 0.0F));
+		PartDefinition left_eye = head.addOrReplaceChild("left_eye", CubeListBuilder.create().texOffs(48, 9).addBox(-4.0F, -3.0F, 0.0F, 8.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(3.0F, -29.0F, -6.0F));
 
 		PartDefinition right_eye = head.addOrReplaceChild("right_eye", CubeListBuilder.create().texOffs(36, 46).addBox(-14.0F, -6.0F, -1.0F, 8.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(3.0F, -26.0F, -5.0F));
 
@@ -62,15 +62,15 @@ public class BinhliModel<T extends Entity> extends HierarchicalModel<T> {
 
 		PartDefinition cube_r4 = left_antena.addOrReplaceChild("cube_r4", CubeListBuilder.create().texOffs(0, 0).addBox(-1.0F, -8.0F, 0.0F, 1.0F, 8.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 1.309F));
 
-		PartDefinition right_antena = head.addOrReplaceChild("right_antena", CubeListBuilder.create().texOffs(25, 53).addBox(-19.4F, -38.8F, 0.5F, 7.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.0F, -1.0F, -1.0F));
+		PartDefinition right_antena = head.addOrReplaceChild("right_antena", CubeListBuilder.create().texOffs(25, 53).addBox(-14.4F, -2.8F, -0.5F, 7.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-7.0F, -37.0F, 0.0F));
 
-		PartDefinition cube_r5 = right_antena.addOrReplaceChild("cube_r5", CubeListBuilder.create().texOffs(48, 17).addBox(-7.0F, -1.0F, 0.0F, 8.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-6.0F, -36.0F, 0.5F, 0.0F, 0.0F, 0.2618F));
+		PartDefinition cube_r5 = right_antena.addOrReplaceChild("cube_r5", CubeListBuilder.create().texOffs(48, 17).addBox(-7.0F, -1.0F, 0.0F, 8.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 0.0F, -0.5F, 0.0F, 0.0F, 0.2618F));
 
-		PartDefinition left_leg = full_body.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(8, 52).addBox(-1.0F, -14.0F, 1.0F, 2.0F, 12.0F, 2.0F, new CubeDeformation(0.0F))
-		.texOffs(16, 53).addBox(-1.0F, -2.0F, -2.0F, 2.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(2.0F, 0.0F, -1.0F));
+		PartDefinition left_leg = full_body.addOrReplaceChild("left_leg", CubeListBuilder.create().texOffs(8, 52).addBox(-1.0F, -0.5F, -1.25F, 2.0F, 12.0F, 2.0F, new CubeDeformation(0.0F))
+		.texOffs(16, 53).addBox(-1.0F, 11.5F, -4.25F, 2.0F, 2.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(2.0F, -13.5F, 1.25F));
 
-		PartDefinition right_leg = full_body.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(49, 53).addBox(-7.0F, -2.0F, -2.0F, 2.0F, 2.0F, 5.0F, new CubeDeformation(0.0F))
-		.texOffs(0, 52).addBox(-7.0F, -14.0F, 1.0F, 2.0F, 12.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(4.0F, 0.0F, -1.0F));
+		PartDefinition right_leg = full_body.addOrReplaceChild("right_leg", CubeListBuilder.create().texOffs(49, 53).addBox(-1.0F, 12.0F, -4.0F, 2.0F, 2.0F, 5.0F, new CubeDeformation(0.0F))
+		.texOffs(0, 52).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 12.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(-2.0F, -14.0F, 1.0F));
 
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}
@@ -78,18 +78,18 @@ public class BinhliModel<T extends Entity> extends HierarchicalModel<T> {
 	@Override
 	public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
-		//this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
+		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
-		this.animateWalk(ModBinhliAnimationDefinitions.BINHLI_WALK, limbSwing, limbSwingAmount, 1f, 3f);
+		this.animateWalk(ModBinhliAnimationDefinitions.BINHLI_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
 		this.animate(BinhliEntity.idleAnimationState, ModBinhliAnimationDefinitions.BINHLI_IDLE, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {
 		pNetHeadYaw = Mth.clamp(pNetHeadYaw, -10.0F, 10.0F);
-		pHeadPitch = Mth.clamp(pHeadPitch, -25.0F, 45.0F);
+		pHeadPitch = Mth.clamp(pHeadPitch, -10.0F, 10.0F);
 
 		this.head.yRot = pNetHeadYaw * ((float)Math.PI / 200F);
-		this.head.xRot = pHeadPitch * ((float)Math.PI / 200F);
+		this.head.xRot = pHeadPitch * ((float)Math.PI / 120F);
 	}
 
 	@Override

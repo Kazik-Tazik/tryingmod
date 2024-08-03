@@ -14,12 +14,15 @@ import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
+import net.yurkevichkazimir.tryingmod.entity.ai.KamizelkaAttackGoal;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 import org.jetbrains.annotations.Nullable;
 
@@ -30,6 +33,18 @@ public class BinhliEntity extends Animal {
 
     public static final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
+
+    public final AnimationState attackAnimationState = new AnimationState();
+    public int attackAnimationTimeout = 0;
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        if(this.level().isClientSide()) {
+            setupAnimationStates();
+        }
+    }
 
     private void setupAnimationStates() {
         if(this.idleAnimationTimeout <= 0) {
@@ -51,17 +66,10 @@ public class BinhliEntity extends Animal {
 
         this.walkAnimation.update(f, 0.2f);
     }
-
-
     @Override
-    public void tick() {
-        super.tick();
-
-        if(this.level().isClientSide()) {
-            setupAnimationStates();
-        }
+    protected void defineSynchedData() {
+        super.defineSynchedData();
     }
-
 
     @Override
     protected void registerGoals() {
@@ -72,8 +80,6 @@ public class BinhliEntity extends Animal {
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 1.1D));
         this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 5f));
         this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-
-
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -81,10 +87,7 @@ public class BinhliEntity extends Animal {
                 .add(Attributes.MAX_HEALTH, 10D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
                 .add(Attributes.MOVEMENT_SPEED, 0.3D)
-                .add(Attributes.ARMOR_TOUGHNESS, 0.01f)
-                .add(Attributes.ATTACK_DAMAGE, 4.0)
-                .add(Attributes.ATTACK_KNOCKBACK, 1.0)
-                .add(Attributes.ATTACK_SPEED, 5.0);
+                .add(Attributes.ARMOR_TOUGHNESS, 0.01f);
     }
 
     @Nullable

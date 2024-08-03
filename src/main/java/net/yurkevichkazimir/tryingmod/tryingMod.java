@@ -1,7 +1,6 @@
 package net.yurkevichkazimir.tryingmod;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -67,6 +66,7 @@ public class tryingMod
         if(event.getTabKey() == CreativeModeTabs.SPAWN_EGGS){
             event.accept(ModItem.KAMIZELKA_SPAWN_EGG);
             event.accept(ModItem.ZUFIK_SPAWN_EGG);
+            event.accept(ModItem.BINHLI_SPAWN_EGG);
         }
     }
 

@@ -25,8 +25,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.HashSet;
 import java.util.Set;
 
-public class BinhliEntity extends Animal {
-    public BinhliEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+public class ZopsikEntity extends Animal {
+    public ZopsikEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
@@ -35,8 +35,6 @@ public class BinhliEntity extends Animal {
     public static final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
-    public final AnimationState attackAnimationState = new AnimationState();
-    public int attackAnimationTimeout = 0;
 
     @Override
     public void tick() {
@@ -76,7 +74,6 @@ public class BinhliEntity extends Animal {
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.15D));
-        this.goalSelector.addGoal(2, new BinhliBreakGoal(this, BLOCKS_TO_AVOID, 10));
         this.goalSelector.addGoal(3, new TemptGoal(this, 1.2D, Ingredient.of(Items.CARROT), false));
         this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1D));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.1D));
@@ -86,16 +83,16 @@ public class BinhliEntity extends Animal {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createLivingAttributes()
-                .add(Attributes.MAX_HEALTH, 18D)
+                .add(Attributes.MAX_HEALTH, 10D)
                 .add(Attributes.FOLLOW_RANGE, 10D)
-                .add(Attributes.MOVEMENT_SPEED, 0.33D)
+                .add(Attributes.MOVEMENT_SPEED, 0.2D)
                 .add(Attributes.ARMOR_TOUGHNESS, 1f);
     }
 
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return ModEntities.BINHLI.get().create(pLevel);
+        return ModEntities.ZOPSIK.get().create(pLevel);
     }
 
     @Override

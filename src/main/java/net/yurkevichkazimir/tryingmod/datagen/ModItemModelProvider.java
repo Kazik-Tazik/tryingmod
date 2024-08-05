@@ -30,6 +30,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItem.KAMIZELKA_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItem.ZUFIK_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
         withExistingParent(ModItem.BINHLI_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItem.ZOPSIK_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         handheldItem(ModItem.CHUGUNOK_STICK);
 

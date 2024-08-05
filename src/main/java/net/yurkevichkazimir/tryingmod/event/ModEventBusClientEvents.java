@@ -1,10 +1,7 @@
 package net.yurkevichkazimir.tryingmod.event;
 
-import net.yurkevichkazimir.tryingmod.entity.client.BinhliModel;
-import net.yurkevichkazimir.tryingmod.entity.client.ZufikModel;
+import net.yurkevichkazimir.tryingmod.entity.client.*;
 import net.yurkevichkazimir.tryingmod.tryingMod;
-import net.yurkevichkazimir.tryingmod.entity.client.ModModelLayers;
-import net.yurkevichkazimir.tryingmod.entity.client.KamizelkaModel;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,5 +14,6 @@ public class ModEventBusClientEvents {
         event.registerLayerDefinition(ModModelLayers.KAMIZELKA_LAYER, KamizelkaModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.ZUFIK_LAYER, ZufikModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.BINHLI_LAYER, BinhliModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.ZOPSIK_LAYER, ZopsikModel::createBodyLayer);
     }
 }

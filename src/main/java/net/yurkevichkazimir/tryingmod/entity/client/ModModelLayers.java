@@ -14,4 +14,7 @@ public class ModModelLayers {
     public static final ModelLayerLocation BINHLI_LAYER = new ModelLayerLocation(
             new ResourceLocation(tryingMod.MOD_ID, "binhli_layer"), "main");
 
+    public static final ModelLayerLocation ZOPSIK_LAYER = new ModelLayerLocation(
+            new ResourceLocation(tryingMod.MOD_ID, "zopsik_layer"), "main");
+
 }

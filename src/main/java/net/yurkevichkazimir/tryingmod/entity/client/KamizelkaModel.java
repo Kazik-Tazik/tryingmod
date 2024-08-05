@@ -74,11 +74,11 @@ public class KamizelkaModel<T extends Entity> extends HierarchicalModel<T> {
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {
-		pNetHeadYaw = Mth.clamp(pNetHeadYaw, -30.0F, 30.0F);
-		pHeadPitch = Mth.clamp(pHeadPitch, -25.0F, 45.0F);
+		pNetHeadYaw = Mth.clamp(pNetHeadYaw, -10.0F, 10.0F);
+		pHeadPitch = Mth.clamp(pHeadPitch, -10.0F, 10.0F);
 
-		this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180F);
-		this.head.xRot = pHeadPitch * ((float)Math.PI / 90F);
+		this.head.yRot = pNetHeadYaw * ((float)Math.PI / 200F);
+		this.head.xRot = pHeadPitch * ((float)Math.PI / 120F);
 	}
 
 	@Override

@@ -1,0 +1,20 @@
+{
+  "pig_maker_item_sound": {
+    "subtitles": "sounds.tryingmod.pig_maker_item_sound",
+    "sounds": [
+      "tryingmod:pig_maker_item_sound"
+    ]
+  },
+  "kamizelka_ambient_sound": {
+    "subtitles": "sounds.tryingmod.kamizelka_ambient_sound",
+    "sounds": [
+      "tryingmod:kamizelka_ambient_sound"
+    ]
+  },
+  "kamizelka_hurt_sound": {
+    "subtitles": "sounds.tryingmod.kamizelka_hurt_sound",
+    "sounds": [
+      "tryingmod:kamizelka_hurt_sound"
+    ]
+  }
+}

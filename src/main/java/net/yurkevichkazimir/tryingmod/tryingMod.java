@@ -17,12 +17,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
-import net.yurkevichkazimir.tryingmod.entity.client.BinhliRenderer;
-import net.yurkevichkazimir.tryingmod.entity.client.KamizelkaRenderer;
-import net.yurkevichkazimir.tryingmod.entity.client.ZopsikRenderer;
-import net.yurkevichkazimir.tryingmod.entity.client.ZufikRenderer;
+import net.yurkevichkazimir.tryingmod.entity.client.*;
 import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
+import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import net.yurkevichkazimir.tryingmod.villager.ModVillagers;
 import org.slf4j.Logger;
 
@@ -48,6 +46,8 @@ public class tryingMod
 
         ModEntities.register(modEventBus);
 
+        ModSounds.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -68,6 +68,7 @@ public class tryingMod
             event.accept(ModItem.KAMIZELKA_SPAWN_EGG);
             event.accept(ModItem.ZUFIK_SPAWN_EGG);
             event.accept(ModItem.BINHLI_SPAWN_EGG);
+            event.accept(ModItem.ZOPSIK_SPAWN_EGG);
         }
     }
 

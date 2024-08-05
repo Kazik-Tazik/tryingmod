@@ -1,10 +1,7 @@
 package net.yurkevichkazimir.tryingmod.entity;
 
-import net.yurkevichkazimir.tryingmod.entity.custom.BinhliEntity;
-import net.yurkevichkazimir.tryingmod.entity.custom.ZopsikEntity;
-import net.yurkevichkazimir.tryingmod.entity.custom.ZufikEntity;
+import net.yurkevichkazimir.tryingmod.entity.custom.*;
 import net.yurkevichkazimir.tryingmod.tryingMod;
-import net.yurkevichkazimir.tryingmod.entity.custom.KamizelkaEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -26,11 +23,12 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<BinhliEntity>> BINHLI =
             ENTITY_TYPES.register("binhli", () -> EntityType.Builder.of(BinhliEntity::new, MobCategory.CREATURE)
-                    .sized(1.2f, 2f).build("binhli"));
+                    .sized(1.2f, 2.7f).build("binhli"));
 
     public static final RegistryObject<EntityType<ZopsikEntity>> ZOPSIK =
             ENTITY_TYPES.register("zopsik", () -> EntityType.Builder.of(ZopsikEntity::new, MobCategory.CREATURE)
-                    .sized(1.2f, 2f).build("zopsik"));
+                    .sized(1.7f, 1.4375f).build("zopsik"));
+
 
 
     public static void register(IEventBus eventBus) {

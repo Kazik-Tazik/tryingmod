@@ -3,6 +3,7 @@ package net.yurkevichkazimir.tryingmod.item.custom;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Pig;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -41,6 +43,8 @@ public class PigMakerItem extends Item {
 
             ItemStack itemStack = pContext.getItemInHand();
             itemStack.hurtAndBreak(1, player1, (p) -> p.broadcastBreakEvent(pContext.getHand()));
+
+            pContext.getLevel().playSeededSound(null, positionClicked.getX(), positionClicked.getY(), positionClicked.getZ(), ModSounds.PIG_MAKER_ITEM_SOUND.get(), SoundSource.BLOCKS, 1f, 1f, 0);
 
             return InteractionResult.SUCCESS;
         }

@@ -25,6 +25,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.yurkevichkazimir.tryingmod.entity.ai.KamizelkaAttackGoal;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
+import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 public class KamizelkaEntity extends Animal {
@@ -135,13 +136,13 @@ public class KamizelkaEntity extends Animal {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.PLAYER_BURP;
+        return ModSounds.KAMIZELKA_AMBIENT_SOUND.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.PLAYER_BIG_FALL;
+        return ModSounds.KAMIZELKA_HURT_SOUND.get();
     }
 
     @Nullable

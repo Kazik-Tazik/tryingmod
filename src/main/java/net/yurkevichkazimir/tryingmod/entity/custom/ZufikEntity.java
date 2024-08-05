@@ -83,7 +83,7 @@ public class ZufikEntity extends Animal {
         return Animal.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 16D)
                 .add(Attributes.FOLLOW_RANGE, 24D)
-                .add(Attributes.MOVEMENT_SPEED, 0.5D)
+                .add(Attributes.MOVEMENT_SPEED, 1)
                 .add(Attributes.ARMOR_TOUGHNESS, 0.01f);
     }
 

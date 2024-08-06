@@ -13,9 +13,22 @@ public class ModSounds {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, tryingMod.MOD_ID);
 
     public static final RegistryObject<SoundEvent> PIG_MAKER_ITEM_SOUND = registerSoundEvents("pig_maker_item_sound");
+
     public static final RegistryObject<SoundEvent> KAMIZELKA_AMBIENT_SOUND = registerSoundEvents("kamizelka_ambient_sound");
     public static final RegistryObject<SoundEvent> KAMIZELKA_HURT_SOUND = registerSoundEvents("kamizelka_hurt_sound");
+    public static final RegistryObject<SoundEvent> KAMIZELKA_DEATH_SOUND = registerSoundEvents("kamizelka_death_sound");
 
+    public static final RegistryObject<SoundEvent> ZUFIK_AMBIENT_SOUND = registerSoundEvents("zufik_ambient_sound");
+    public static final RegistryObject<SoundEvent> ZUFIK_HURT_SOUND = registerSoundEvents("zufik_hurt_sound");
+    public static final RegistryObject<SoundEvent> ZUFIK_DEATH_SOUND = registerSoundEvents("zufik_death_sound");
+
+    public static final RegistryObject<SoundEvent> ZOPSIK_AMBIENT_SOUND = registerSoundEvents("zopsik_ambient_sound");
+    public static final RegistryObject<SoundEvent> ZOPSIK_HURT_SOUND = registerSoundEvents("zopsik_hurt_sound");
+    public static final RegistryObject<SoundEvent> ZOPSIK_DEATH_SOUND = registerSoundEvents("zopsik_death_sound");
+
+    public static final RegistryObject<SoundEvent> BINHLI_AMBIENT_SOUND = registerSoundEvents("binhli_ambient_sound");
+    public static final RegistryObject<SoundEvent> BINHLI_HURT_SOUND = registerSoundEvents("binhli_hurt_sound");
+    public static final RegistryObject<SoundEvent> BINHLI_DEATH_SOUND = registerSoundEvents("binhli_death_sound");
 
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {

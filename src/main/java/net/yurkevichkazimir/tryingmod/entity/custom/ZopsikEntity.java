@@ -27,6 +27,7 @@ import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.entity.ai.BinhliBreakGoal;
 import net.yurkevichkazimir.tryingmod.entity.ai.KamizelkaAttackGoal;
 import net.yurkevichkazimir.tryingmod.entity.ai.ZopsikAttackGoal;
+import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
@@ -141,18 +142,18 @@ public class ZopsikEntity extends Animal {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.SQUID_HURT;
+        return ModSounds.ZOPSIK_AMBIENT_SOUND.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource pDamageSource) {
-        return SoundEvents.CAMEL_HURT;
+        return ModSounds.ZOPSIK_HURT_SOUND.get();
     }
 
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ZOMBIE_DEATH;
+        return ModSounds.ZOPSIK_DEATH_SOUND.get();
     }
 }

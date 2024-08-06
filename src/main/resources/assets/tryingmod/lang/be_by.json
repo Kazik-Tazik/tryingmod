@@ -27,6 +27,24 @@
 
   "entity.minecraft.villager.tryingmod.porkmaster": "Хахлінка",
 
+  "sounds.tryingmod.pig_maker_item_sound": "Дрымценне Свінатара",
+
+  "sounds.tryingmod.kamizelka_ambient_sound": "Камізэлька вітаецца",
+  "sounds.tryingmod.kamizelka_hurt_sound": "Боль Камізэлькі",
+  "sounds.tryingmod.kamizelka_death_sound": "Камізэлька памёр",
+
+  "sounds.tryingmod.zufik_ambient_sound": "Жуфік нешта кажа",
+  "sounds.tryingmod.zufik_hurt_sound": "Жуфік адчувае сябе дрэнна",
+  "sounds.tryingmod.zufik_death_sound": "Жуфік знік",
+
+  "sounds.tryingmod.zopsik_ambient_sound": "Жопсік жапсуе",
+  "sounds.tryingmod.zopsik_hurt_sound": "Жопсіку балюча",
+  "sounds.tryingmod.zopsik_death_sound": "Жопсік памёр :(",
+
+  "sounds.tryingmod.binhli_ambient_sound": "Бінглі мовіць",
+  "sounds.tryingmod.binhli_hurt_sound": "Бінглі кажа, што яму балюча",
+  "sounds.tryingmod.binhli_death_sound": "Binhli кокнуўся",
+
   "creativetab.trying_tab": "Я СПРАБУЮ МОД"
 
 

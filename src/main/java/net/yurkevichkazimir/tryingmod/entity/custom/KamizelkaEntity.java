@@ -3,7 +3,6 @@ package net.yurkevichkazimir.tryingmod.entity.custom;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Spider;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
@@ -148,6 +147,6 @@ public class KamizelkaEntity extends Animal {
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.GOAT_SCREAMING_DEATH;
+        return ModSounds.KAMIZELKA_DEATH_SOUND.get();
     }
 }

@@ -4,8 +4,10 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -22,6 +24,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
+import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
 
@@ -206,5 +209,23 @@ public class ZufikEntity extends Animal {
     @Override
     public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob ageableMob) {
         return ModEntities.ZUFIK.get().create(pLevel);
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return ModSounds.ZUFIK_AMBIENT_SOUND.get();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return ModSounds.ZUFIK_HURT_SOUND.get();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.ZUFIK_DEATH_SOUND.get();
     }
 }

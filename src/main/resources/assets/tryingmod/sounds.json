@@ -16,5 +16,65 @@
     "sounds": [
       "tryingmod:kamizelka_hurt_sound"
     ]
+  },
+  "kamizelka_death_sound": {
+    "subtitles": "sounds.tryingmod.kamizelka_death_sound",
+    "sounds": [
+      "tryingmod:kamizelka_death_sound"
+    ]
+  },
+  "zopsik_ambient_sound": {
+    "subtitles": "sounds.tryingmod.zopsik_ambient_sound",
+    "sounds": [
+      "tryingmod:zopsik_ambient_sound"
+    ]
+  },
+  "zopsik_hurt_sound": {
+    "subtitles": "sounds.tryingmod.zopsik_hurt_sound",
+    "sounds": [
+      "tryingmod:zopsik_hurt_sound"
+    ]
+  },
+  "zopsik_death_sound": {
+    "subtitles": "sounds.tryingmod.zopsik_death_sound",
+    "sounds": [
+      "tryingmod:zopsik_death_sound"
+    ]
+  },
+  "binhli_ambient_sound": {
+    "subtitles": "sounds.tryingmod.binhli_ambient_sound",
+    "sounds": [
+      "tryingmod:binhli_ambient_sound"
+    ]
+  },
+  "binhli_hurt_sound": {
+    "subtitles": "sounds.tryingmod.binhli_hurt_sound",
+    "sounds": [
+      "tryingmod:binhli_hurt_sound"
+    ]
+  },
+  "binhli_death_sound": {
+    "subtitles": "sounds.tryingmod.binhli_death_sound",
+    "sounds": [
+      "tryingmod:binhli_death_sound"
+    ]
+  },
+  "zufik_ambient_sound": {
+    "subtitles": "sounds.tryingmod.zufik_ambient_sound",
+    "sounds": [
+      "tryingmod:zufik_ambient_sound"
+    ]
+  },
+  "zufik_hurt_sound": {
+    "subtitles": "sounds.tryingmod.zufik_hurt_sound",
+    "sounds": [
+      "tryingmod:zufik_hurt_sound"
+    ]
+  },
+  "zufik_death_sound": {
+    "subtitles": "sounds.tryingmod.zufik_death_sound",
+    "sounds": [
+      "tryingmod:zufik_death_sound"
+    ]
   }
 }

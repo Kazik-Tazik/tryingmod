@@ -33,8 +33,22 @@
   "tooltip.tryingmod.pig_maker_item.tooltip": "Rumors are saying that this item makes anything go... pig?",
 
   "sounds.tryingmod.pig_maker_item_sound": "Pig-Inator noise",
+
   "sounds.tryingmod.kamizelka_ambient_sound": "Kamizelka's greeting",
   "sounds.tryingmod.kamizelka_hurt_sound": "Kamizelka's hurt",
+  "sounds.tryingmod.kamizelka_death_sound": "Kamizelka died",
+
+  "sounds.tryingmod.zufik_ambient_sound": "Žufik speaks",
+  "sounds.tryingmod.zufik_hurt_sound": "Žufik is in agony",
+  "sounds.tryingmod.zufik_death_sound": "Žufik died",
+
+  "sounds.tryingmod.zopsik_ambient_sound": "Žopsik speaks",
+  "sounds.tryingmod.zopsik_hurt_sound": "Žopsik is in agony",
+  "sounds.tryingmod.zopsik_death_sound": "Žopsik died",
+
+  "sounds.tryingmod.binhli_ambient_sound": "Binhli speaks",
+  "sounds.tryingmod.binhli_hurt_sound": "Binhli is in agony",
+  "sounds.tryingmod.binhli_death_sound": "Binhli died",
 
   "creativetab.trying_tab": "Trying Mod"
 

@@ -75,7 +75,7 @@ public class ZufikEntity extends Animal {
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.25));
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.1D));
         this.goalSelector.addGoal(3, new BreedGoal(this, 1.15D));
-        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.KELP), false));
+        this.goalSelector.addGoal(4, new TemptGoal(this, 1.2D, Ingredient.of(Items.COAL), false));
         this.goalSelector.addGoal(5, new FollowParentGoal(this, 1.1D));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 5f));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));

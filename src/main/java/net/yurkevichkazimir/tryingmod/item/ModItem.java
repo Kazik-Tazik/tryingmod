@@ -29,6 +29,9 @@ public class ModItem {
     public static final RegistryObject<Item> DRANIKI = ITEMS.register("draniki",
             () -> new Item(new Item.Properties().food(ModFoods.DRANIKI)));
 
+    public static final RegistryObject<Item> FRACTAL_GRASS = ITEMS.register("fractal_grass",
+            () -> new Item(new Item.Properties().food(ModFoods.FRACTAL_GRASS)));
+
     public static final RegistryObject<Item> TWENTY_FOUR_HOUR_FUEL = ITEMS.register("twenty_four_hour_fuel",
             () -> new FuelItem(new Item.Properties(), 1728000));
 

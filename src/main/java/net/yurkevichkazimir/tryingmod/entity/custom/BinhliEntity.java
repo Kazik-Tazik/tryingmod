@@ -20,6 +20,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.entity.ai.BinhliBreakGoal;
+import net.yurkevichkazimir.tryingmod.item.ModItem;
 import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
@@ -78,7 +79,7 @@ public class BinhliEntity extends Animal {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.15D));
         this.goalSelector.addGoal(2, new BinhliBreakGoal(this, BLOCKS_TO_AVOID, 10));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.2D, Ingredient.of(Items.CARROT), false));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1.2D, Ingredient.of(ModItem.FRACTAL_GRASS.get()), false));
         this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1D));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.1D));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 5f));
@@ -101,7 +102,7 @@ public class BinhliEntity extends Animal {
 
     @Override
     public boolean isFood(ItemStack pStack) {
-        return pStack.is(Items.CARROT);
+        return pStack.is(ModItem.FRACTAL_GRASS.get());
     }
 
     @Nullable

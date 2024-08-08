@@ -18,6 +18,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.entity.client.*;
+import net.yurkevichkazimir.tryingmod.event.ModEventHandlers;
 import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 import net.yurkevichkazimir.tryingmod.sound.ModSounds;
@@ -49,6 +50,8 @@ public class tryingMod
         ModSounds.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
+
+        MinecraftForge.EVENT_BUS.register(ModEventHandlers.class);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

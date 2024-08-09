@@ -21,6 +21,7 @@ import net.yurkevichkazimir.tryingmod.entity.client.*;
 import net.yurkevichkazimir.tryingmod.event.ModEventHandlers;
 import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
+import net.yurkevichkazimir.tryingmod.loot.ModLootModifiers;
 import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import net.yurkevichkazimir.tryingmod.villager.ModVillagers;
 import org.slf4j.Logger;
@@ -48,6 +49,8 @@ public class tryingMod
         ModEntities.register(modEventBus);
 
         ModSounds.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

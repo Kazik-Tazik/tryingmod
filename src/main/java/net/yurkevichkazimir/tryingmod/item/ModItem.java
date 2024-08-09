@@ -54,6 +54,9 @@ public class ModItem {
             () -> new ForgeSpawnEggItem(ModEntities.ZOPSIK, 0xffe100, 0x9b8909,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> ZOPSIK_EYE = ITEMS.register("zopsik_eye",
+            () -> new Item(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

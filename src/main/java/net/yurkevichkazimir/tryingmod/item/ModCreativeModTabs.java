@@ -24,6 +24,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItem.CHUGUNOK.get());
                         pOutput.accept(ModItem.PIG_MAKER_ITEM.get());
                         pOutput.accept(ModItem.TWENTY_FOUR_HOUR_FUEL.get());
+                        pOutput.accept(ModItem.ZOPSIK_EYE.get());
                         pOutput.accept(ModItem.KAMIZELKA_SPAWN_EGG.get());
                         pOutput.accept(ModItem.ZUFIK_SPAWN_EGG.get());
                         pOutput.accept(ModItem.BINHLI_SPAWN_EGG.get());

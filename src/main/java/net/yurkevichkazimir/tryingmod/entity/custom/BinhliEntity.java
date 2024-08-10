@@ -37,8 +37,8 @@ public class BinhliEntity extends Animal {
     public static final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
-    public final AnimationState attackAnimationState = new AnimationState();
-    public int attackAnimationTimeout = 0;
+    public static final AnimationState blockBreakAnimationState = new AnimationState();
+    private int blockBreakAnimationTimeout = 0;
 
     @Override
     public void tick() {
@@ -56,6 +56,14 @@ public class BinhliEntity extends Animal {
         } else {
             --this.idleAnimationTimeout;
         }
+        if (this.blockBreakAnimationTimeout > 0) {
+            this.blockBreakAnimationTimeout--;
+        }
+    }
+
+    public void startBlockBreakingAnimation() {
+        this.blockBreakAnimationTimeout = this.random.nextInt(20) + 40; // Adjust timing as needed
+        this.blockBreakAnimationState.start(this.tickCount);
     }
 
     @Override

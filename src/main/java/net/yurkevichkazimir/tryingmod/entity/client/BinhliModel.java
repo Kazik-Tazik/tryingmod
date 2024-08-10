@@ -80,8 +80,15 @@ public class BinhliModel<T extends Entity> extends HierarchicalModel<T> {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
-		this.animateWalk(ModBinhliAnimationDefinitions.BINHLI_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-		this.animate(BinhliEntity.idleAnimationState, ModBinhliAnimationDefinitions.BINHLI_IDLE, ageInTicks, 1f);
+		if (BinhliEntity.blockBreakAnimationState.isStarted()) {
+			this.animate(BinhliEntity.blockBreakAnimationState, ModBinhliAnimationDefinitions.BINHLI_BREAKING, ageInTicks, 1f);
+		} else {
+			// Walking animation
+			this.animateWalk(ModBinhliAnimationDefinitions.BINHLI_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
+
+			// Idle animation
+			this.animate(BinhliEntity.idleAnimationState, ModBinhliAnimationDefinitions.BINHLI_IDLE, ageInTicks, 1f);
+		}
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

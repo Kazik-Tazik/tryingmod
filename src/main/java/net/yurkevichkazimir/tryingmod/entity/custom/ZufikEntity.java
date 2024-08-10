@@ -25,6 +25,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
+import net.yurkevichkazimir.tryingmod.item.ModItem;
 import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import org.jetbrains.annotations.Nullable;
 
@@ -95,37 +96,15 @@ public class ZufikEntity extends Animal {
 
     @Override
     public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
-        ItemStack itemstack = pPlayer.getItemInHand(pHand);
-        Item item = itemstack.getItem();
-
-        Item itemForTaming = Items.APPLE;
-
-        if(item == itemForTaming) {
-            if(this.level().isClientSide()) {
-                return InteractionResult.CONSUME;
-            } else {
-                if (!pPlayer.getAbilities().instabuild) {
-                    itemstack.shrink(1);
+        if (!this.isBaby() && !this.isVehicle()) {
+            ItemStack itemstack = pPlayer.getItemInHand(pHand);
+            if (itemstack.isEmpty() && pHand == InteractionHand.MAIN_HAND) {
+                if (!pPlayer.isCrouching()) {
+                    setRiding(pPlayer);
                 }
-
-                if (!ForgeEventFactory.onAnimalTame(this, pPlayer)) {
-                    this.navigation.recomputePath();
-                    this.setTarget(null);
-                    this.level().broadcastEntityEvent(this, (byte)7);
-                }
-
                 return InteractionResult.SUCCESS;
             }
         }
-        if(pHand == InteractionHand.MAIN_HAND && !isFood(itemstack)) {
-            if(!pPlayer.isCrouching()) {
-                setRiding(pPlayer);
-            } else {
-
-            }
-            return InteractionResult.SUCCESS;
-        }
-
         return super.mobInteract(pPlayer, pHand);
     }
 
@@ -141,7 +120,7 @@ public class ZufikEntity extends Animal {
     @Nullable
     @Override
     public LivingEntity getControllingPassenger() {
-        return ((LivingEntity) this.getFirstPassenger());
+        return this.getFirstPassenger() instanceof LivingEntity ? (LivingEntity) this.getFirstPassenger() : null;
     }
 
     @Override
@@ -211,6 +190,12 @@ public class ZufikEntity extends Animal {
     public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob ageableMob) {
         return ModEntities.ZUFIK.get().create(pLevel);
     }
+
+    @Override
+    public boolean isFood(ItemStack pStack) {
+        return pStack.is(Items.COAL);
+    }
+
 
     @Nullable
     @Override

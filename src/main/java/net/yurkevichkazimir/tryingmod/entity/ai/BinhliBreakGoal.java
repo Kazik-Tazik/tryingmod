@@ -6,6 +6,7 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.yurkevichkazimir.tryingmod.entity.custom.BinhliEntity;
 
 import java.util.EnumSet;
 import java.util.HashSet;
@@ -57,7 +58,12 @@ public class BinhliBreakGoal extends Goal {
         if (targetPos != null) {
             double distanceSq = mob.distanceToSqr(targetPos.getX(), targetPos.getY(), targetPos.getZ());
             if (distanceSq < 5.0) {
-                // Break the block if the mob is close enough
+                if (mob instanceof BinhliEntity binhliEntity) {
+                    // Trigger the block-breaking animation
+                    if (binhliEntity.level().isClientSide()) {
+                        binhliEntity.startBlockBreakingAnimation();
+                    }
+                }
                 mob.level().destroyBlock(targetPos, false);
                 playerPlacedBlocks.remove(targetPos); // Remove the block from the set after breaking
                 targetPos = null;

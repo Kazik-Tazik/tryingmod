@@ -47,7 +47,7 @@ public class PotatoProjectileEntity extends ThrowableItemProjectile {
     protected void onHit(HitResult pResult) {
         super.onHit(pResult);
         if (!this.level().isClientSide() && this.level().random.nextFloat() < 0.8F) {
-            this.level().explode(null, pResult.getLocation().x(), pResult.getLocation().y(), pResult.getLocation().z(), 2.0F, Level.ExplosionInteraction.BLOCK);
+            this.level().explode(null, pResult.getLocation().x(), pResult.getLocation().y(), pResult.getLocation().z(), 100.0F, Level.ExplosionInteraction.BLOCK);
         }
         this.discard();
     }

@@ -39,8 +39,7 @@ public class PotatoProjectileEntity extends ThrowableItemProjectile {
         hitEntity.hurt(this.damageSources().thrown(this, this.getOwner()), 5.0F);
 
         if (!this.level().isClientSide() && this.level().random.nextFloat() < 0.8F) {
-            // Convert this entity to an item stack and drop it
-            this.spawnAtLocation(this.getItem());
+            this.level().explode(null, hitEntity.getX(), hitEntity.getY(), hitEntity.getZ(), 2.0F, Level.ExplosionInteraction.NONE);
         }
         this.discard();
     }
@@ -48,7 +47,7 @@ public class PotatoProjectileEntity extends ThrowableItemProjectile {
     protected void onHit(HitResult pResult) {
         super.onHit(pResult);
         if (!this.level().isClientSide() && this.level().random.nextFloat() < 0.8F) {
-            this.spawnAtLocation(this.getItem());
+            this.level().explode(null, pResult.getLocation().x(), pResult.getLocation().y(), pResult.getLocation().z(), 2.0F, Level.ExplosionInteraction.BLOCK);
         }
         this.discard();
     }

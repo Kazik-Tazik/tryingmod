@@ -29,6 +29,11 @@ public class ModEntities {
             ENTITY_TYPES.register("zopsik", () -> EntityType.Builder.of(ZopsikEntity::new, MobCategory.CREATURE)
                     .sized(1.7f, 1.4375f).build("zopsik"));
 
+    public static final RegistryObject<EntityType<PotatoProjectileEntity>> POTATO_PROJECTILE =
+            ENTITY_TYPES.register("potato_projectile", () -> EntityType.Builder.<PotatoProjectileEntity>of(PotatoProjectileEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .build("potato_projectile"));
+
 
 
 

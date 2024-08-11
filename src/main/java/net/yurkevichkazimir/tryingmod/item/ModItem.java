@@ -8,6 +8,7 @@ import net.yurkevichkazimir.tryingmod.block.ModBlocks;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.item.custom.FuelItem;
 import net.yurkevichkazimir.tryingmod.item.custom.PigMakerItem;
+import net.yurkevichkazimir.tryingmod.item.custom.PotatoItem;
 import net.yurkevichkazimir.tryingmod.item.custom.ZopsikEye;
 import net.yurkevichkazimir.tryingmod.tryingMod;
 import net.minecraft.world.item.Item;
@@ -57,6 +58,9 @@ public class ModItem {
 
     public static final RegistryObject<Item> ZOPSIK_EYE = ITEMS.register("zopsik_eye",
             () -> new ZopsikEye(new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> POTATO_PROJECTILE = ITEMS.register("potato_projectile",
+            () -> new PotatoItem(new Item.Properties().stacksTo(64)));
 
 
     public static void register(IEventBus eventBus){

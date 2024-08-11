@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-09T16:21:08.7142494	Item Models: tryingmod
+// 1.20.1	2024-08-11T16:31:47.3335082	Item Models: tryingmod
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tryingmod/models/item/binhli_spawn_egg.json
 fffe25e5c48af217c55359759c6a48ecc3cac304 assets/tryingmod/models/item/chugunok.json
 1866de234240ffc1f053bcef08ec2a8cdacf9ddb assets/tryingmod/models/item/chugunok_stick.json
@@ -15,6 +15,7 @@ ef51bde9e28e3a5aa98866935c60044a83578c4a assets/tryingmod/models/item/pig_seeds.
 a1ef74a0037122a90c60a03a2b0eb380043306c2 assets/tryingmod/models/item/pork_stairs.json
 15efa916392f5481541ebf35165da982499f251e assets/tryingmod/models/item/pork_trapdoor.json
 5aea7d476628efe3d8825bc28f7142b050bcc639 assets/tryingmod/models/item/pork_wall.json
+7c49c77173938ae521c9fddbf71f38ba30621dcb assets/tryingmod/models/item/potato_projectile.json
 300cdc581861682c1452cb2f9efc5314c39558e0 assets/tryingmod/models/item/twenty_four_hour_fuel.json
 b4f739a166fdc6ae149df914879c831bc533c588 assets/tryingmod/models/item/zopsik_eye.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tryingmod/models/item/zopsik_spawn_egg.json

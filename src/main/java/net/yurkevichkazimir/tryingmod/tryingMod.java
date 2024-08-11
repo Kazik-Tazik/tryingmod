@@ -2,6 +2,7 @@ package net.yurkevichkazimir.tryingmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -21,6 +22,7 @@ import net.yurkevichkazimir.tryingmod.entity.client.*;
 import net.yurkevichkazimir.tryingmod.event.ModEventHandlers;
 import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
+import net.yurkevichkazimir.tryingmod.item.custom.PotatoItem;
 import net.yurkevichkazimir.tryingmod.loot.ModLootModifiers;
 import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import net.yurkevichkazimir.tryingmod.villager.ModVillagers;
@@ -94,6 +96,8 @@ public class tryingMod
             EntityRenderers.register(ModEntities.ZUFIK.get(), ZufikRenderer::new);
             EntityRenderers.register(ModEntities.BINHLI.get(), BinhliRenderer::new);
             EntityRenderers.register(ModEntities.ZOPSIK.get(), ZopsikRenderer::new);
+
+            EntityRenderers.register(ModEntities.POTATO_PROJECTILE.get(), ThrownItemRenderer::new);
         }
     }
 }

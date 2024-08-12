@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yurkevichkazimir.tryingmod.block.custom.PigCropBlock;
+import net.yurkevichkazimir.tryingmod.block.custom.PotatoExplosionMaker;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 import net.yurkevichkazimir.tryingmod.tryingMod;
 
@@ -66,6 +67,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> PIG_CROP = BLOCKS.register("pig_crop",
             () -> new PigCropBlock(BlockBehaviour.Properties.copy(Blocks.BEETROOTS).noOcclusion().noCollission()));
 
+    public static final RegistryObject<Block> POTATO_EXPLOSION_MAKER = registerBlock("potato_explosion_maker",
+            () -> new PotatoExplosionMaker(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.NETHERITE_BLOCK)));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {

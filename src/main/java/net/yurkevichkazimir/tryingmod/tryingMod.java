@@ -1,10 +1,12 @@
 package net.yurkevichkazimir.tryingmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -17,6 +19,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
+import net.yurkevichkazimir.tryingmod.block.entity.ModBlocksEntities;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.entity.client.*;
 import net.yurkevichkazimir.tryingmod.event.ModEventHandlers;
@@ -24,6 +27,8 @@ import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 import net.yurkevichkazimir.tryingmod.item.custom.PotatoItem;
 import net.yurkevichkazimir.tryingmod.loot.ModLootModifiers;
+import net.yurkevichkazimir.tryingmod.screen.ModMenuTypes;
+import net.yurkevichkazimir.tryingmod.screen.PotatoExplosionMakerScreen;
 import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import net.yurkevichkazimir.tryingmod.villager.ModVillagers;
 import org.slf4j.Logger;
@@ -53,6 +58,9 @@ public class tryingMod
         ModSounds.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+
+        ModBlocksEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -98,6 +106,9 @@ public class tryingMod
             EntityRenderers.register(ModEntities.ZOPSIK.get(), ZopsikRenderer::new);
 
             EntityRenderers.register(ModEntities.POTATO_PROJECTILE.get(), ThrownItemRenderer::new);
+            MenuScreens.register(ModMenuTypes.POTATO_EXPLOSION_MAKER_MENU.get(), PotatoExplosionMakerScreen::new);
+
+
         }
     }
 }

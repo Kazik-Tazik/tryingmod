@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-25T19:52:42.5784708	Loot Tables
+// 1.20.1	2024-08-12T12:32:29.9431715	Loot Tables
 4c4bb02155dd2565d03cd9cff8701397bafc9624 data/tryingmod/loot_tables/blocks/chugunok_block.json
 96f10a6e63e9923818740bf6a99ec2c0a45ee7b5 data/tryingmod/loot_tables/blocks/chugunok_ore.json
 d5f2a7d99cab2f3e27e93c5faf0e6372fc03d584 data/tryingmod/loot_tables/blocks/cooked_pork_block.json
@@ -13,3 +13,4 @@ f8936094ccd6882219f802b38da54b3834fd0504 data/tryingmod/loot_tables/blocks/pork_
 78d9355264a584a32a3046710c9b57bfc3fd19c9 data/tryingmod/loot_tables/blocks/pork_stairs.json
 f1cfa567c5b58ca0e7132ee3d9399dc7d51d5ca6 data/tryingmod/loot_tables/blocks/pork_trapdoor.json
 fe1c1970e075845e45b79c51fa8667aab5ee0d1c data/tryingmod/loot_tables/blocks/pork_wall.json
+5e372a48010764879a8b09f831e034279b69828f data/tryingmod/loot_tables/blocks/potato_explosion_maker.json

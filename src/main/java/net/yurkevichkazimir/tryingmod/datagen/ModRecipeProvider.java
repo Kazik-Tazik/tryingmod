@@ -110,6 +110,19 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(Items.PORKCHOP)
                 .unlockedBy(getHasName(Items.PORKCHOP), has(Items.PORKCHOP))
                 .save(pWriter);
+
+        //Potato Explosion Maker
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.POTATO_EXPLOSION_MAKER.get(), 1)
+                .pattern("RNR")
+                .pattern("STS")
+                .pattern("S S")
+                .define('R', Items.GOLD_INGOT)
+                .define('N', Items.NETHERITE_INGOT)
+                .define('S', ModItem.CHUGUNOK.get())
+                .define('T', Items.TNT)
+                .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
+                .save(pWriter);
+
     }
 
 

@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
@@ -25,6 +26,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PORK_BLOCK);
         blockWithItem(ModBlocks.COOKED_PORK_BLOCK);
         blockWithItem(ModBlocks.CHUGUNOK_ORE);
+
+        simpleBlock(ModBlocks.POTATO_EXPLOSION_MAKER.get(), new ModelFile.UncheckedModelFile(modLoc("block/potato_explosion_maker")));
+
 
         stairsBlock(((StairBlock) ModBlocks.PORK_STAIRS.get()), blockTexture(ModBlocks.PORK_BLOCK.get()));
         slabBlock(((SlabBlock) ModBlocks.PORK_SLAB.get()), blockTexture(ModBlocks.PORK_BLOCK.get()), blockTexture(ModBlocks.PORK_BLOCK.get()));

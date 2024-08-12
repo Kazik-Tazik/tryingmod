@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "R": {
+      "item": "minecraft:gold_ingot"
+    },
+    "S": {
+      "item": "tryingmod:chugunok"
+    },
+    "T": {
+      "item": "minecraft:tnt"
+    }
+  },
+  "pattern": [
+    "RNR",
+    "STS",
+    "S S"
+  ],
+  "result": {
+    "item": "tryingmod:potato_explosion_maker"
+  },
+  "show_notification": true
+}

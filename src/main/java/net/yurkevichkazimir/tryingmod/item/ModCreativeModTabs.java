@@ -44,6 +44,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.PORK_PRESSURE_PLATE.get());
                         pOutput.accept(ModBlocks.PORK_WALL.get());
                         pOutput.accept(ModBlocks.COOKED_PORK_BLOCK.get());
+                        pOutput.accept(ModBlocks.POTATO_EXPLOSION_MAKER.get());
+
                         pOutput.accept(ModItem.DRANIKI.get());
                         pOutput.accept(ModItem.FRACTAL_GRASS.get());
                         pOutput.accept(ModItem.PIG_SEEDS.get());

@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-25T19:52:42.5719567	Block States: tryingmod
+// 1.20.1	2024-08-12T12:32:29.9391537	Block States: tryingmod
 660f3cd76d88d789612713dabd51001ab4cc57d1 assets/tryingmod/blockstates/chugunok_block.json
 939459b2b607e76c1f444e3887f272117f21d6cf assets/tryingmod/blockstates/chugunok_ore.json
 1bec02d9102dbf0932e4f32bfc22265f419e7f3d assets/tryingmod/blockstates/cooked_pork_block.json
@@ -13,6 +13,7 @@ b8fb99a551cf022bfb0e8dad241870f06a5322cb assets/tryingmod/blockstates/pork_door.
 f11abed16fd77a39aae05c407b48daed6d074b9a assets/tryingmod/blockstates/pork_stairs.json
 3a641e974ec3a164b694f5932bfee4c978188b26 assets/tryingmod/blockstates/pork_trapdoor.json
 a14b676b05f30e1c3d5699a37e5d1015ed5783cd assets/tryingmod/blockstates/pork_wall.json
+0d70e85ba74d85a3d45184ad86ea16c4972c1764 assets/tryingmod/blockstates/potato_explosion_maker.json
 3c0daece68969e3a6323ae791c2bfc23752225cd assets/tryingmod/models/block/chugunok_block.json
 4d9549ada79d3ba3144a3fa6e41ba329859e9157 assets/tryingmod/models/block/chugunok_ore.json
 6d46e7d30e1f1188da7f120f493871ee8165b4f4 assets/tryingmod/models/block/cooked_pork_block.json

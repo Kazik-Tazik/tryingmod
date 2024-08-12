@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-25T20:04:31.3203322	Recipes
+// 1.20.1	2024-08-12T15:29:34.0867705	Recipes
 e1e232fb4929e71720d114244acd70b1c1711162 data/minecraft/advancements/recipes/food/cooked_porkchop.json
 85d7f36eaa1821bb619c63578cf0c7cb07792ff6 data/minecraft/advancements/recipes/food/porkchop.json
 cb7516645e803d8407ae7ee72b7118c03470fb7d data/minecraft/recipes/cooked_porkchop.json
@@ -11,6 +11,7 @@ b65cf5ca386dc2791ba473aa82272341cfb439a9 data/tryingmod/advancements/recipes/foo
 9cc8ccbc89b27b7e50c3e52b83050387d532704c data/tryingmod/advancements/recipes/misc/chugunok_block.json
 5705091a4491176b451f49700cc1261b81d13771 data/tryingmod/advancements/recipes/misc/chugunok_stick.json
 076278487065ee790bd90f98fe88c11f8559455d data/tryingmod/advancements/recipes/tools/pig_maker_item.json
+957651dd7d5e2fda7931a1c60b3f59c2fcf9aa00 data/tryingmod/advancements/recipes/tools/potato_explosion_maker.json
 2cca8f013b526e2b17ad3f440311c12eea3336c0 data/tryingmod/recipes/chugunok.json
 08e186f311d35fdb68fdaef5a7770b06683fe9ea data/tryingmod/recipes/chugunok_block.json
 ceef736451201b9881bc871434bd3904841a7060 data/tryingmod/recipes/chugunok_stick.json
@@ -19,3 +20,4 @@ cd10320ad889acc5205fb37a3858cf1377f0ef7c data/tryingmod/recipes/draniki.json
 14b26649653eace0d8dd1223be37679a40dc3137 data/tryingmod/recipes/pig_maker_item.json
 b309cd4444bc4e655d1173934cd11d25e0e8fb62 data/tryingmod/recipes/pig_seeds.json
 a4b77cfd8c35a7613f8639499b5ec8d172696172 data/tryingmod/recipes/pork_block.json
+357c9484b2ddc6fa405132ace3370838435a5486 data/tryingmod/recipes/potato_explosion_maker.json

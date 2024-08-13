@@ -34,6 +34,11 @@ public class ModEntities {
                     .sized(0.5f, 0.5f)
                     .build("potato_projectile"));
 
+    public static final RegistryObject<EntityType<CarrotProjectileEntity>> CARROT_PROJECTILE =
+            ENTITY_TYPES.register("carrot_projectile", () -> EntityType.Builder.<CarrotProjectileEntity>of(CarrotProjectileEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .build("carrot_projectile"));
+
 
 
 

@@ -27,6 +27,7 @@ import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 import net.yurkevichkazimir.tryingmod.item.custom.PotatoItem;
 import net.yurkevichkazimir.tryingmod.loot.ModLootModifiers;
+import net.yurkevichkazimir.tryingmod.recipe.ModRecipes;
 import net.yurkevichkazimir.tryingmod.screen.ModMenuTypes;
 import net.yurkevichkazimir.tryingmod.screen.PotatoExplosionMakerScreen;
 import net.yurkevichkazimir.tryingmod.sound.ModSounds;
@@ -61,6 +62,8 @@ public class tryingMod
 
         ModBlocksEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -106,6 +109,7 @@ public class tryingMod
             EntityRenderers.register(ModEntities.ZOPSIK.get(), ZopsikRenderer::new);
 
             EntityRenderers.register(ModEntities.POTATO_PROJECTILE.get(), ThrownItemRenderer::new);
+            EntityRenderers.register(ModEntities.CARROT_PROJECTILE.get(), ThrownItemRenderer::new);
             MenuScreens.register(ModMenuTypes.POTATO_EXPLOSION_MAKER_MENU.get(), PotatoExplosionMakerScreen::new);
 
 

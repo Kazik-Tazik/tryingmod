@@ -1,0 +1,12 @@
+{
+  "type": "tryingmod:potato_explosion_maker",
+  "ingredients": [
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "tryingmod:potato_projectile"
+  }
+}

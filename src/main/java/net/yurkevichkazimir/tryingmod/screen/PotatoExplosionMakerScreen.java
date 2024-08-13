@@ -20,8 +20,8 @@ public class PotatoExplosionMakerScreen extends AbstractContainerScreen<PotatoEx
     @Override
     protected void init() {
         super.init();
-//        this.inventoryLabelY = 10000;
-//        this.titleLabelY = 10000;
+        this.inventoryLabelY = 10000;
+        this.titleLabelY = 10000;
     }
 
     @Override

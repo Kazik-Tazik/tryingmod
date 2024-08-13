@@ -12,23 +12,23 @@ import net.minecraft.world.phys.HitResult;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 
-public class PotatoProjectileEntity extends ThrowableItemProjectile {
-    public PotatoProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
+public class CarrotProjectileEntity extends ThrowableItemProjectile {
+    public CarrotProjectileEntity(EntityType<? extends ThrowableItemProjectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
-    public PotatoProjectileEntity(Level pLevel) {
-        super(ModEntities.POTATO_PROJECTILE.get(), pLevel);
+    public CarrotProjectileEntity(Level pLevel) {
+        super(ModEntities.CARROT_PROJECTILE.get(), pLevel);
     }
 
-    public PotatoProjectileEntity(Level pLevel, LivingEntity livingEntity) {
-        super(ModEntities.POTATO_PROJECTILE.get(), livingEntity, pLevel);
+    public CarrotProjectileEntity(Level pLevel, LivingEntity livingEntity) {
+        super(ModEntities.CARROT_PROJECTILE.get(), livingEntity, pLevel);
     }
 
 
     @Override
     protected Item getDefaultItem() {
-        return ModItem.POTATO_PROJECTILE.get();
+        return ModItem.CARROT_PROJECTILE.get();
     }
 
     protected void onHitEntity(EntityHitResult pResult) {

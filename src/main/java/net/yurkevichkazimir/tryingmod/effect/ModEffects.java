@@ -13,7 +13,7 @@ public class ModEffects {
             = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, tryingMod.MOD_ID);
 
     public static final RegistryObject<MobEffect> PIG_EFFECT = MOB_EFFECTS.register("pig_effect",
-            () -> new FreezeEffect(MobEffectCategory.HARMFUL, 3124687));
+            () -> new PigEffect(MobEffectCategory.NEUTRAL, 0xf0a3ab));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

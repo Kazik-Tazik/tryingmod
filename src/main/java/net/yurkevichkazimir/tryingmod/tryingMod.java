@@ -28,6 +28,7 @@ import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 import net.yurkevichkazimir.tryingmod.item.custom.PotatoItem;
 import net.yurkevichkazimir.tryingmod.loot.ModLootModifiers;
+import net.yurkevichkazimir.tryingmod.potion.ModPotions;
 import net.yurkevichkazimir.tryingmod.recipe.ModRecipes;
 import net.yurkevichkazimir.tryingmod.screen.ModMenuTypes;
 import net.yurkevichkazimir.tryingmod.screen.PotatoExplosionMakerScreen;
@@ -67,6 +68,7 @@ public class tryingMod
         ModRecipes.register(modEventBus);
 
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

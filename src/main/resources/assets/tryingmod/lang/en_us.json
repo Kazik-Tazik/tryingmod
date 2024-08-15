@@ -55,6 +55,12 @@
   "sounds.tryingmod.binhli_hurt_sound": "Binhli is in agony",
   "sounds.tryingmod.binhli_death_sound": "Binhli died",
 
+  "effects.tryingmod.pig_effect": "Pigafication",
+
+  "item.minecraft.splash_potion.effect.pig_potion": "Pigification Splash Potion",
+  "item.minecraft.potion.effect.pig_potion": "Pigification Splash Potion",
+  "item.minecraft.lingering_potion.effect.pig_potion": "Pigification Lingering Potion",
+
   "creativetab.trying_tab": "Trying Mod"
 
 

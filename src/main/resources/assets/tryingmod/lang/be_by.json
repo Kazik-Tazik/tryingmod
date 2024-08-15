@@ -50,6 +50,12 @@
   "sounds.tryingmod.binhli_hurt_sound": "Бінглі кажа, што яму балюча",
   "sounds.tryingmod.binhli_death_sound": "Binhli кокнуўся",
 
+  "effect.tryingmod.pig_effect": "Свінная канвертацыя",
+
+  "item.minecraft.splash_potion.effect.pig_potion": "Выбухное зелле свінячасці",
+  "item.minecraft.potion.effect.pig_potion": "Зелле свінячасці",
+  "item.minecraft.lingering_potion.effect.pig_potion": "Трывалае зелле свінячасці",
+
   "creativetab.trying_tab": "Я СПРАБУЮ МОД"
 
 

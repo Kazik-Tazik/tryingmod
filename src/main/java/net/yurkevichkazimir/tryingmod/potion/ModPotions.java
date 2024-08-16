@@ -14,7 +14,7 @@ public class ModPotions {
             = DeferredRegister.create(ForgeRegistries.POTIONS, tryingMod.MOD_ID);
 
     public static final RegistryObject<Potion> PIG_POTION = POTIONS.register("pig_potion",
-            () -> new Potion(new MobEffectInstance(ModEffects.PIG_EFFECT.get(), 200, 0)));
+            () -> new Potion(new MobEffectInstance(ModEffects.PIG_EFFECT.get(), 70, 0)));
 
     public static void register(IEventBus eventBus) {
         POTIONS.register(eventBus);

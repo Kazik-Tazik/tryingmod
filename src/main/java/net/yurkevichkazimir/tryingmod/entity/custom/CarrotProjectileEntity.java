@@ -3,6 +3,7 @@ package net.yurkevichkazimir.tryingmod.entity.custom;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -15,6 +16,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.yurkevichkazimir.tryingmod.effect.ModEffects;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
 
@@ -38,7 +40,15 @@ public class CarrotProjectileEntity extends ThrowableItemProjectile {
     }
 
     protected void onHitEntity(EntityHitResult pResult) {
+        super.onHitEntity(pResult);
 
+        if (pResult.getEntity() instanceof LivingEntity) {
+            LivingEntity entity = (LivingEntity) pResult.getEntity();
+
+            entity.addEffect(new MobEffectInstance(ModEffects.PIG_EFFECT.get(), 20, 1));
+        }
+
+        this.discard();
     }
 
     protected void onHit(HitResult pResult) {

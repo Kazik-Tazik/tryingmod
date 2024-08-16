@@ -1,0 +1,4 @@
+// 1.20.1	2024-08-16T16:51:15.0735431	Registries
+ed66a38aea94ff5a09ff5f015daee45ce621db55 data/tryingmod/forge/biome_modifier/add_chugunok_ore.json
+17a0e795e8a19060499d044b2417346b977aaa29 data/tryingmod/worldgen/configured_feature/chugunok_ore.json
+7a921871189c8a96f563d782ef29a71a32aa467c data/tryingmod/worldgen/placed_feature/chugunok_ore_placed.json

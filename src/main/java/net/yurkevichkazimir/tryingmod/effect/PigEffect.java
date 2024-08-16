@@ -13,6 +13,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.yurkevichkazimir.tryingmod.entity.ai.RunAroundLikeCrazyGoal;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -49,14 +50,16 @@ public class PigEffect extends MobEffect {
                 pig.setCustomName(mob.getCustomName());
                 pig.setHealth(mob.getHealth());
 
+                // Add the custom crazy running AI goal to the pig
+                pig.goalSelector.addGoal(0, new RunAroundLikeCrazyGoal(pig, 2.0));
+
                 // Add the pig to the world and remove the original mob
                 serverLevel.addFreshEntity(pig);
                 mob.remove(Entity.RemovalReason.DISCARDED);
 
                 LOGGER.info("Entity transformed into a pig successfully.");
 
-                // Apply the PigEffect to revert after 3 seconds (60 ticks)
-                pig.addEffect(new MobEffectInstance(this, 60, amplifier, false, false));
+                pig.addEffect(new MobEffectInstance(this, 70, amplifier, false, false));
             } else {
                 LOGGER.warn("Failed to create pig entity.");
             }

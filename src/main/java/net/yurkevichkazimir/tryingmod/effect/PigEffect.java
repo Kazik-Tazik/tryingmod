@@ -43,15 +43,20 @@ public class PigEffect extends MobEffect {
                 CompoundTag persistentData = pig.getPersistentData();
                 persistentData.putString(ORIGINAL_TYPE_TAG, getEntityTypeName(mob.getType()));
 
+                // Store the original entity's health
+                float originalHealth = mob.getHealth();
+
                 // Copy position and other attributes
                 pig.moveTo(mob.getX(), mob.getY(), mob.getZ(), mob.getYRot(), mob.getXRot());
                 pig.setNoAi(mob.isNoAi());
                 pig.setInvulnerable(mob.isInvulnerable());
                 pig.setCustomName(mob.getCustomName());
-                pig.setHealth(mob.getHealth());
 
-                // Add the custom crazy running AI goal to the pig
-                pig.goalSelector.addGoal(0, new RunAroundLikeCrazyGoal(pig, 2.0));
+                // Adjust the pig's max health attribute to match the original entity's health
+                pig.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH).setBaseValue(originalHealth);
+                pig.setHealth(originalHealth); // Set the pig's health to the original entity's health
+
+                pig.goalSelector.addGoal(0, new RunAroundLikeCrazyGoal(pig, 3));
 
                 // Add the pig to the world and remove the original mob
                 serverLevel.addFreshEntity(pig);

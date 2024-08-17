@@ -38,6 +38,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItem.ZOPSIK_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         handheldItem(ModItem.CHUGUNOK_STICK);
+        handheldItem(ModItem.HEALTH_WRITE_ITEM);
 
         simpleBlockItem(ModBlocks.PORK_DOOR);
         evenSimplerBlockItem(ModBlocks.PORK_STAIRS);

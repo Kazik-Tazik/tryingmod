@@ -44,6 +44,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItem.CHUGUNOK_STICK.get());
                         pOutput.accept(ModItem.CHUGUNOK.get());
                         pOutput.accept(ModItem.PIG_MAKER_ITEM.get());
+                        pOutput.accept(ModItem.HEALTH_WRITE_ITEM.get());
                         pOutput.accept(ModItem.TWENTY_FOUR_HOUR_FUEL.get());
                         pOutput.accept(ModItem.ZOPSIK_EYE.get());
                         pOutput.accept(ModItem.POTATO_PROJECTILE.get());
@@ -53,7 +54,7 @@ public class ModCreativeModTabs {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> TRYING_MOD_FOOD_TAB = CREATIVE_MODE_TABS.register("trying_mod_food_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.FRACTAL_GRASS.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.DRANIKI.get()))
                     .title(Component.translatable("creativetab.trying_mod_food_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItem.DRANIKI.get());

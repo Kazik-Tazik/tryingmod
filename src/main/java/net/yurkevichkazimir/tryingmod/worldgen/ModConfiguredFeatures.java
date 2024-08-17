@@ -1,4 +1,4 @@
-package net.yurkevichkazimir.worldgen;
+package net.yurkevichkazimir.tryingmod.worldgen;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;

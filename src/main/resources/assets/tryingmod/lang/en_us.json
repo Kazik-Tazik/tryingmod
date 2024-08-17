@@ -3,7 +3,7 @@
   "item.tryingmod.chugunok": "Chugunok",
   "item.tryingmod.chugunok_stick": "Chugunok Stick",
   "item.tryingmod.pig_maker_item": "Pig-Inator",
-  "item.tryingmod.draniki": "Draniki",
+  "item.tryingmod.draniki": "Dranik",
   "item.tryingmod.fractal_grass": "Fractal Grass",
   "item.tryingmod.pig_seeds": "Seeds of Pork",
   "item.tryingmod.twenty_four_hour_fuel": "24h fuel",
@@ -61,7 +61,10 @@
   "item.minecraft.potion.effect.pig_potion": "Pigification Splash Potion",
   "item.minecraft.lingering_potion.effect.pig_potion": "Pigification Lingering Potion",
 
-  "creativetab.trying_tab": "Trying Mod"
+  "creativetab.trying_mod_entity_tab": "Trying Mod Entities",
+  "creativetab.trying_mod_blocks_tab": "Trying Mod Blocks",
+  "creativetab.trying_mod_items_tab": "Trying Mod Items",
+  "creativetab.trying_mod_food_tab": "Trying Mod Food"
 
 
 }

@@ -16,23 +16,10 @@ public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, tryingMod.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.CHUGUNOK.get()))
-                    .title(Component.translatable("creativetab.trying_tab"))
+    public static final RegistryObject<CreativeModeTab> TRYING_MOD_BLOCKS_TAB = CREATIVE_MODE_TABS.register("trying_mod_blocks_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.CHUGUNOK_BLOCK.get()))
+                    .title(Component.translatable("creativetab.trying_mod_blocks_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItem.CHUGUNOK_STICK.get());
-                        pOutput.accept(ModItem.CHUGUNOK.get());
-                        pOutput.accept(ModItem.PIG_MAKER_ITEM.get());
-                        pOutput.accept(ModItem.TWENTY_FOUR_HOUR_FUEL.get());
-                        pOutput.accept(ModItem.ZOPSIK_EYE.get());
-                        pOutput.accept(ModItem.KAMIZELKA_SPAWN_EGG.get());
-                        pOutput.accept(ModItem.ZUFIK_SPAWN_EGG.get());
-                        pOutput.accept(ModItem.BINHLI_SPAWN_EGG.get());
-                        pOutput.accept(ModItem.ZOPSIK_SPAWN_EGG.get());
-                        pOutput.accept(ModItem.POTATO_PROJECTILE.get());
-                        pOutput.accept(ModItem.CARROT_PROJECTILE.get());
-                        pOutput.accept(ModItem.CARROT_PROJECTILE.get());
-
                         pOutput.accept(ModBlocks.CHUGUNOK_BLOCK.get());
                         pOutput.accept(ModBlocks.CHUGUNOK_ORE.get());
                         pOutput.accept(ModBlocks.PORK_BLOCK.get());
@@ -47,13 +34,45 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.PORK_WALL.get());
                         pOutput.accept(ModBlocks.COOKED_PORK_BLOCK.get());
                         pOutput.accept(ModBlocks.POTATO_EXPLOSION_MAKER.get());
+                    })
+                    .build());
 
+    public static final RegistryObject<CreativeModeTab> TRYING_MOD_ITEMS_TAB = CREATIVE_MODE_TABS.register("trying_mod_items_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.PIG_MAKER_ITEM.get()))
+                    .title(Component.translatable("creativetab.trying_mod_items_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItem.CHUGUNOK_STICK.get());
+                        pOutput.accept(ModItem.CHUGUNOK.get());
+                        pOutput.accept(ModItem.PIG_MAKER_ITEM.get());
+                        pOutput.accept(ModItem.TWENTY_FOUR_HOUR_FUEL.get());
+                        pOutput.accept(ModItem.ZOPSIK_EYE.get());
+                        pOutput.accept(ModItem.POTATO_PROJECTILE.get());
+                        pOutput.accept(ModItem.CARROT_PROJECTILE.get());
+                        pOutput.accept(ModItem.CARROT_PROJECTILE.get());
+                    })
+                    .build());
+
+    public static final RegistryObject<CreativeModeTab> TRYING_MOD_FOOD_TAB = CREATIVE_MODE_TABS.register("trying_mod_food_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.FRACTAL_GRASS.get()))
+                    .title(Component.translatable("creativetab.trying_mod_food_tab"))
+                    .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItem.DRANIKI.get());
                         pOutput.accept(ModItem.FRACTAL_GRASS.get());
                         pOutput.accept(ModItem.PIG_SEEDS.get());
                     })
                     .build());
 
+
+    public static final RegistryObject<CreativeModeTab> TRYING_MOD_ENTITY_TAB = CREATIVE_MODE_TABS.register("trying_mod_entity_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.KAMIZELKA_SPAWN_EGG.get()))
+                    .title(Component.translatable("creativetab.trying_mod_entity_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItem.KAMIZELKA_SPAWN_EGG.get());
+                        pOutput.accept(ModItem.ZUFIK_SPAWN_EGG.get());
+                        pOutput.accept(ModItem.BINHLI_SPAWN_EGG.get());
+                        pOutput.accept(ModItem.ZOPSIK_SPAWN_EGG.get());
+                    })
+                    .build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

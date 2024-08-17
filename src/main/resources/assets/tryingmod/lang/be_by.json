@@ -2,7 +2,7 @@
   "item.tryingmod.chugunok": "Чугунок",
   "item.tryingmod.chugunok_stick": "Палка з чугунка",
   "item.tryingmod.pig_maker_item": "Свінатар",
-  "item.tryingmod.draniki": "Дранікі",
+  "item.tryingmod.draniki": "Дранік",
   "item.tryingmod.fractal_grass": "Фрактальная трава",
   "item.tryingmod.twenty_four_hour_fuel": "Паліва 24г",
   "item.tryingmod.kamizelka_spawn_egg": "Яйка прызыву - Камізэлька",
@@ -56,7 +56,8 @@
   "item.minecraft.potion.effect.pig_potion": "Зелле свінячасці",
   "item.minecraft.lingering_potion.effect.pig_potion": "Трывалае зелле свінячасці",
 
-  "creativetab.trying_tab": "Я СПРАБУЮ МОД"
-
-
+  "creativetab.trying_mod_entity_tab": "Модавыя Мобы",
+  "creativetab.trying_mod_blocks_tab": "Модавыя Блокі",
+  "creativetab.trying_mod_items_tab": "Модавыя Прадметы",
+  "creativetab.trying_mod_food_tab": "Модавая Ежа"
 }

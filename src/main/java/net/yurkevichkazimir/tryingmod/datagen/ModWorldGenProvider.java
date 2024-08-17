@@ -7,9 +7,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.yurkevichkazimir.tryingmod.tryingMod;
-import net.yurkevichkazimir.worldgen.ModBiomeModifiers;
-import net.yurkevichkazimir.worldgen.ModConfiguredFeatures;
-import net.yurkevichkazimir.worldgen.ModPlacedFeatures;
+import net.yurkevichkazimir.tryingmod.worldgen.ModBiomeModifiers;
+import net.yurkevichkazimir.tryingmod.worldgen.ModConfiguredFeatures;
+import net.yurkevichkazimir.tryingmod.worldgen.ModPlacedFeatures;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;

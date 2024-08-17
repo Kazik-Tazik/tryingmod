@@ -1,4 +1,4 @@
-package net.yurkevichkazimir.worldgen;
+package net.yurkevichkazimir.tryingmod.worldgen;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;

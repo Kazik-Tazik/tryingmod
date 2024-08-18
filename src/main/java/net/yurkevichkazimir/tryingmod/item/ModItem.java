@@ -1,6 +1,7 @@
 package net.yurkevichkazimir.tryingmod.item;
 
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Rarity;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
@@ -53,9 +54,6 @@ public class ModItem {
             () -> new ForgeSpawnEggItem(ModEntities.ZOPSIK, 0xffe100, 0x9b8909,
                     new Item.Properties()));
 
-    public static final RegistryObject<Item> ZOPSIK_EYE = ITEMS.register("zopsik_eye",
-            () -> new ZopsikEye(new Item.Properties().stacksTo(1)));
-
     public static final RegistryObject<Item> POTATO_PROJECTILE = ITEMS.register("potato_projectile",
             () -> new PotatoItem(new Item.Properties().stacksTo(64)));
 
@@ -67,6 +65,18 @@ public class ModItem {
 
     public static final RegistryObject<Item> FRENCH_STAFF_ITEM = ITEMS.register("french_staff_item",
             () -> new FrenchStaffItem(new Item.Properties()));
+
+    public static final RegistryObject<Item> ZOPSIK_EYE = ITEMS.register("zopsik_eye",
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1)));
+
+    public static final RegistryObject<Item> ZUFIK_LEG = ITEMS.register("zufik_leg",
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1)));
+
+    public static final RegistryObject<Item> KAMIZELKA_HAT = ITEMS.register("kamizelka_hat",
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1)));
+
+    public static final RegistryObject<Item> BINHLI_ANTENNA = ITEMS.register("binhli_antenna",
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus){

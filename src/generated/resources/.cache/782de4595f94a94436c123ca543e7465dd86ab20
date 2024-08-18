@@ -1,4 +1,5 @@
-// 1.20.1	2024-08-17T19:07:34.9828637	Item Models: tryingmod
+// 1.20.1	2024-08-18T19:10:15.8974636	Item Models: tryingmod
+fd1f022e03d9a8c9f83cb3376225435f1ab181a7 assets/tryingmod/models/item/binhli_antenna.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tryingmod/models/item/binhli_spawn_egg.json
 86ee75f962b33f407f1fadc74e76064946e082b0 assets/tryingmod/models/item/carrot_projectile.json
 fffe25e5c48af217c55359759c6a48ecc3cac304 assets/tryingmod/models/item/chugunok.json
@@ -21,4 +22,5 @@ a1ef74a0037122a90c60a03a2b0eb380043306c2 assets/tryingmod/models/item/pork_stair
 300cdc581861682c1452cb2f9efc5314c39558e0 assets/tryingmod/models/item/twenty_four_hour_fuel.json
 b4f739a166fdc6ae149df914879c831bc533c588 assets/tryingmod/models/item/zopsik_eye.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tryingmod/models/item/zopsik_spawn_egg.json
+b6f69bc293b0b742d50e9bb084b534cf69ffebe4 assets/tryingmod/models/item/zufik_leg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tryingmod/models/item/zufik_spawn_egg.json

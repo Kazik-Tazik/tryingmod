@@ -76,5 +76,11 @@
     "sounds": [
       "tryingmod:zufik_death_sound"
     ]
+  },
+  "french_staff_item_sound": {
+    "subtitles": "sounds.tryingmod.french_staff_item_sound",
+    "sounds": [
+      "tryingmod:french_staff_item_sound"
+    ]
   }
 }

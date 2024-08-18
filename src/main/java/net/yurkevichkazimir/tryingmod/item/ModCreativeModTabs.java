@@ -45,11 +45,10 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItem.CHUGUNOK.get());
                         pOutput.accept(ModItem.PIG_MAKER_ITEM.get());
                         pOutput.accept(ModItem.HEALTH_WRITE_ITEM.get());
+                        pOutput.accept(ModItem.FRENCH_STAFF_ITEM.get());
                         pOutput.accept(ModItem.TWENTY_FOUR_HOUR_FUEL.get());
                         pOutput.accept(ModItem.ZOPSIK_EYE.get());
                         pOutput.accept(ModItem.POTATO_PROJECTILE.get());
-                        pOutput.accept(ModItem.CARROT_PROJECTILE.get());
-                        pOutput.accept(ModItem.CARROT_PROJECTILE.get());
                     })
                     .build());
 

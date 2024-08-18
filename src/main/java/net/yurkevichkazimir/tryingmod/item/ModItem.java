@@ -65,6 +65,9 @@ public class ModItem {
     public static final RegistryObject<Item> HEALTH_WRITE_ITEM = ITEMS.register("health_write_item",
             () -> new HealthWriteItem(new Item.Properties()));
 
+    public static final RegistryObject<Item> FRENCH_STAFF_ITEM = ITEMS.register("french_staff_item",
+            () -> new FrenchStaffItem(new Item.Properties()));
+
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

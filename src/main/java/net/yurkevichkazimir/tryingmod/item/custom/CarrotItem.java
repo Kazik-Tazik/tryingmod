@@ -23,7 +23,7 @@ public class CarrotItem extends Item {
         if (!pLevel.isClientSide) {
             CarrotProjectileEntity carrot = new CarrotProjectileEntity(pLevel, pPlayer);
             carrot.setItem(itemStack);
-            carrot.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 1.5F, 1.0F);
+            carrot.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 3F, 1.0F);
             pLevel.addFreshEntity(carrot);
         }
 

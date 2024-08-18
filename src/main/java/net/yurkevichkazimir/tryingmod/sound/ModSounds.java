@@ -30,6 +30,7 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> BINHLI_HURT_SOUND = registerSoundEvents("binhli_hurt_sound");
     public static final RegistryObject<SoundEvent> BINHLI_DEATH_SOUND = registerSoundEvents("binhli_death_sound");
 
+    public static final RegistryObject<SoundEvent> FRENCH_STAFF_ITEM_SOUND = registerSoundEvents("french_staff_item_sound");
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {
         return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(tryingMod.MOD_ID, name)));

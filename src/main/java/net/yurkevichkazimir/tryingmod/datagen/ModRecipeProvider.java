@@ -123,6 +123,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
                 .save(pWriter);
 
+        //French Staff
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItem.FRENCH_STAFF_ITEM.get(), 1)
+                .pattern(" SG")
+                .pattern(" HS")
+                .pattern("L  ")
+                .define('L', ModItem.ZUFIK_LEG.get())
+                .define('H', ModItem.KAMIZELKA_HAT.get())
+                .define('S', ModItem.BINHLI_ANTENNA.get())
+                .define('G', ModItem.ZOPSIK_EYE.get())
+                .unlockedBy(getHasName(ModItem.ZOPSIK_EYE.get()), has(ModItem.ZOPSIK_EYE.get()))
+                .save(pWriter);
     }
 
 

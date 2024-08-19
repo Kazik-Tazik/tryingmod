@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "tryingmod:zopsik_eye"
+    },
+    "H": {
+      "item": "tryingmod:kamizelka_hat"
+    },
+    "L": {
+      "item": "tryingmod:zufik_leg"
+    },
+    "S": {
+      "item": "tryingmod:binhli_antenna"
+    }
+  },
+  "pattern": [
+    " SG",
+    " HS",
+    "L  "
+  ],
+  "result": {
+    "item": "tryingmod:french_staff_item"
+  },
+  "show_notification": true
+}

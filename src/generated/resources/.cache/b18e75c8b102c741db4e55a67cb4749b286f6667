@@ -1,0 +1,6 @@
+// 1.20.1	2024-08-19T15:04:43.5468403	Global Loot Modifiers : tryingmod
+8f92b9b23af4f183db62124a3814e2b8c64dc50c data/forge/loot_modifiers/global_loot_modifiers.json
+cfd7fcfccb07c30fec484283048ad8a7df506a15 data/tryingmod/loot_modifiers/binhli_antenna_from_ancient_city.json
+4a16d256e36bab765ca0678507fb41b3b5249b0b data/tryingmod/loot_modifiers/kamizelka_hat_from_abandoned_mineshaft.json
+b882c0bd3d64f5c5d9ea4d3644c5843e38251c3f data/tryingmod/loot_modifiers/zopsik_eye_from_desert_pyramid.json
+38f137ae8d2877fad4c8f1a6d968159085b9f26a data/tryingmod/loot_modifiers/zufik_leg_from_jungle_temples.json

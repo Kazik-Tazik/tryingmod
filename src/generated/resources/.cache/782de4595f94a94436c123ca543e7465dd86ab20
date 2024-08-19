@@ -1,4 +1,4 @@
-// 1.20.1	2024-08-18T19:10:15.8974636	Item Models: tryingmod
+// 1.20.1	2024-08-19T13:36:22.774731	Item Models: tryingmod
 fd1f022e03d9a8c9f83cb3376225435f1ab181a7 assets/tryingmod/models/item/binhli_antenna.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tryingmod/models/item/binhli_spawn_egg.json
 86ee75f962b33f407f1fadc74e76064946e082b0 assets/tryingmod/models/item/carrot_projectile.json
@@ -7,6 +7,7 @@ fffe25e5c48af217c55359759c6a48ecc3cac304 assets/tryingmod/models/item/chugunok.j
 a5f59be2acf6304472c81fcaf7adb0501034b779 assets/tryingmod/models/item/draniki.json
 5b5ec9de13f7eda6d447fa211025b7ef094f269b assets/tryingmod/models/item/fractal_grass.json
 94b90761604ad10782a4edd7db21d7a45937e311 assets/tryingmod/models/item/health_write_item.json
+139e053a72d47a94c0780a178b21214da2cf106e assets/tryingmod/models/item/kamizelka_hat.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/tryingmod/models/item/kamizelka_spawn_egg.json
 ef51bde9e28e3a5aa98866935c60044a83578c4a assets/tryingmod/models/item/pig_seeds.json
 634fe2c04dd656531b38579970dfce7c3bcbbc91 assets/tryingmod/models/item/pork_button.json

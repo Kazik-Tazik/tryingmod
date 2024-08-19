@@ -46,9 +46,12 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItem.PIG_MAKER_ITEM.get());
                         pOutput.accept(ModItem.HEALTH_WRITE_ITEM.get());
                         pOutput.accept(ModItem.FRENCH_STAFF_ITEM.get());
-                        pOutput.accept(ModItem.TWENTY_FOUR_HOUR_FUEL.get());
+                        pOutput.accept(ModItem.KAMIZELKA_HAT.get());
                         pOutput.accept(ModItem.ZOPSIK_EYE.get());
+                        pOutput.accept(ModItem.BINHLI_ANTENNA.get());
+                        pOutput.accept(ModItem.ZUFIK_LEG.get());
                         pOutput.accept(ModItem.POTATO_PROJECTILE.get());
+                        pOutput.accept(ModItem.TWENTY_FOUR_HOUR_FUEL.get());
                     })
                     .build());
 
@@ -68,9 +71,9 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.trying_mod_entity_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItem.KAMIZELKA_SPAWN_EGG.get());
-                        pOutput.accept(ModItem.ZUFIK_SPAWN_EGG.get());
-                        pOutput.accept(ModItem.BINHLI_SPAWN_EGG.get());
                         pOutput.accept(ModItem.ZOPSIK_SPAWN_EGG.get());
+                        pOutput.accept(ModItem.BINHLI_SPAWN_EGG.get());
+                        pOutput.accept(ModItem.ZUFIK_SPAWN_EGG.get());
                     })
                     .build());
 

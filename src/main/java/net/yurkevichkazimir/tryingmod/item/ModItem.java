@@ -76,7 +76,7 @@ public class ModItem {
             () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1)));
 
     public static final RegistryObject<Item> BINHLI_ANTENNA = ITEMS.register("binhli_antenna",
-            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(1)));
+            () -> new Item(new Item.Properties().rarity(Rarity.UNCOMMON).stacksTo(2)));
 
 
     public static void register(IEventBus eventBus){

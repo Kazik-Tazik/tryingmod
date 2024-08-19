@@ -29,7 +29,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItem.FRACTAL_GRASS);
         simpleItem(ModItem.PIG_SEEDS);
         simpleItem(ModItem.ZOPSIK_EYE);
-        //simpleItem(ModItem.KAMIZELKA_HAT);
+        simpleItem(ModItem.KAMIZELKA_HAT);
         simpleItem(ModItem.ZUFIK_LEG);
         simpleItem(ModItem.BINHLI_ANTENNA);
         simpleItem(ModItem.POTATO_PROJECTILE);

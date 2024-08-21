@@ -1,4 +1,4 @@
-package net.yurkevichkazimir.tryingmod.worldgen.biomes;
+package net.yurkevichkazimir.tryingmod.worldgen.biome;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
@@ -7,7 +7,6 @@ import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.Musics;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
@@ -16,11 +15,11 @@ import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import net.yurkevichkazimir.tryingmod.tryingMod;
 
 public class ModBiomes {
-    public static final ResourceKey<Biome> FRENCH_BIOME = ResourceKey.create(Registries.BIOME,
-            new ResourceLocation(tryingMod.MOD_ID, "french_biome"));
+    public static final ResourceKey<Biome> FRANCE_BIOME = ResourceKey.create(Registries.BIOME,
+            new ResourceLocation(tryingMod.MOD_ID, "france_biome"));
 
     public static void boostrap(BootstapContext<Biome> context) {
-        context.register(FRENCH_BIOME, frenchBiome(context));
+        context.register(FRANCE_BIOME, testBiome(context));
     }
 
     public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
@@ -32,13 +31,12 @@ public class ModBiomes {
         BiomeDefaultFeatures.addSurfaceFreezing(builder);
     }
 
-    public static Biome frenchBiome(BootstapContext<Biome> context) {
+    public static Biome testBiome(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.KAMIZELKA.get(), 2, 1, 2));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.ZOPSIK.get(), 2, 4, 4));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.ZUFIK.get(), 2, 3, 5));
 
-        BiomeDefaultFeatures.farmAnimals(spawnBuilder);
-        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.BINHLI.get(), 3, 2, 4));
+
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -62,14 +60,14 @@ public class ModBiomes {
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
-                        .waterColor(0x36004a)
-                        .waterFogColor(0xbf1b26)
-                        .skyColor(0x212121)
-                        .grassColorOverride(0x7f03fc)
+                        .waterColor(0x500c6b)
+                        .waterFogColor(0x500c6b)
+                        .skyColor(0x1f1f1f)
+                        .grassColorOverride(0x8f8f8f)
                         .foliageColorOverride(0xd203fc)
-                        .fogColor(0x22a1e6)
+                        .fogColor(0x1f1f1f)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
-                        .backgroundMusic(Musics.createGameMusic(ModSounds.ZUFIK_DEATH_SOUND.getHolder().get())).build())
+                        .backgroundMusic(Musics.createGameMusic(ModSounds.KAMIZELKA_HURT_SOUND.getHolder().get())).build())
                 .build();
     }
 }

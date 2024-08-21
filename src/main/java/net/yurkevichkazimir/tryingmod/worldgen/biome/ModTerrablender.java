@@ -1,4 +1,4 @@
-package net.yurkevichkazimir.tryingmod.worldgen.biomes;
+package net.yurkevichkazimir.tryingmod.worldgen.biome;
 
 import net.minecraft.resources.ResourceLocation;
 import net.yurkevichkazimir.tryingmod.tryingMod;

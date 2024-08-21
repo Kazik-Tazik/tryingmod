@@ -26,7 +26,6 @@ import net.yurkevichkazimir.tryingmod.entity.client.*;
 import net.yurkevichkazimir.tryingmod.event.ModEventHandlers;
 import net.yurkevichkazimir.tryingmod.item.ModCreativeModTabs;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
-import net.yurkevichkazimir.tryingmod.item.custom.PotatoItem;
 import net.yurkevichkazimir.tryingmod.loot.ModLootModifiers;
 import net.yurkevichkazimir.tryingmod.potion.ModPotions;
 import net.yurkevichkazimir.tryingmod.recipe.ModRecipes;
@@ -34,7 +33,11 @@ import net.yurkevichkazimir.tryingmod.screen.ModMenuTypes;
 import net.yurkevichkazimir.tryingmod.screen.PotatoExplosionMakerScreen;
 import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import net.yurkevichkazimir.tryingmod.villager.ModVillagers;
+import net.yurkevichkazimir.tryingmod.worldgen.biome.ModTerrablender;
+import net.yurkevichkazimir.tryingmod.worldgen.biome.surface.ModSurfaceRules;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
+import terrablender.core.TerraBlender;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(tryingMod.MOD_ID)
@@ -70,6 +73,8 @@ public class tryingMod
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
 
+        ModTerrablender.registerBiomes();
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(ModEventHandlers.class);
@@ -81,9 +86,7 @@ public class tryingMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
-        LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
     }
 
     // Add the example block item to the building blocks tab

@@ -10,7 +10,7 @@ import net.yurkevichkazimir.tryingmod.tryingMod;
 import net.yurkevichkazimir.tryingmod.worldgen.ModBiomeModifiers;
 import net.yurkevichkazimir.tryingmod.worldgen.ModConfiguredFeatures;
 import net.yurkevichkazimir.tryingmod.worldgen.ModPlacedFeatures;
-import net.yurkevichkazimir.tryingmod.worldgen.biomes.ModBiomes;
+import net.yurkevichkazimir.tryingmod.worldgen.biome.ModBiomes;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;

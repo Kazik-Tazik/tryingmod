@@ -36,6 +36,11 @@
 
   "tooltip.tryingmod.pig_maker_item.tooltip": "Ходзяць чуткі, што гэты прадмет ператварае ўсё ў... свіней?",
 
+  "entity.tryingmod.kamizelka": "Камізэлька",
+  "entity.tryingmod.zopsik": "Жопсік",
+  "entity.tryingmod.binhli": "Бінглі",
+  "entity.tryingmod.zufik": "Жуфік",
+
   "entity.minecraft.villager.tryingmod.porkmaster": "Хахлінка",
 
   "sounds.tryingmod.pig_maker_item_sound": "Дрымценне Свінатара",

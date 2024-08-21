@@ -70,6 +70,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTATO_EXPLOSION_MAKER = registerBlock("potato_explosion_maker",
             () -> new PotatoExplosionMaker(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().sound(SoundType.NETHERITE_BLOCK)));
 
+    public static final RegistryObject<Block> FRENCH_DIRT = registerBlock("french_dirt",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.MOSS)));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

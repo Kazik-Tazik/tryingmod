@@ -31,6 +31,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.CHUGUNOK_BLOCK.get());
+        dropSelf(ModBlocks.FRENCH_DIRT.get());
         dropSelf(ModBlocks.PORK_BLOCK.get());
         dropSelf(ModBlocks.COOKED_PORK_BLOCK.get());
         dropSelf(ModBlocks.POTATO_EXPLOSION_MAKER.get());

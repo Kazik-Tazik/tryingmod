@@ -26,6 +26,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PORK_BLOCK);
         blockWithItem(ModBlocks.COOKED_PORK_BLOCK);
         blockWithItem(ModBlocks.CHUGUNOK_ORE);
+        blockWithItem(ModBlocks.FRENCH_DIRT);
 
         simpleBlock(ModBlocks.POTATO_EXPLOSION_MAKER.get(), new ModelFile.UncheckedModelFile(modLoc("block/potato_explosion_maker")));
 

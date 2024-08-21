@@ -34,39 +34,36 @@ public class ModBiomes {
     public static Biome testBiome(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.ZUFIK.get(), 2, 3, 5));
-
         spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.BINHLI.get(), 3, 2, 4));
-
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
-        //we need to follow the same order as vanilla biomes for the BiomeDefaultFeatures
-        globalOverworldGeneration(biomeBuilder);
-        BiomeDefaultFeatures.addMossyStoneBlock(biomeBuilder);
-        BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
-        BiomeDefaultFeatures.addFerns(biomeBuilder);
-        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
-        BiomeDefaultFeatures.addExtraGold(biomeBuilder);
 
-        biomeBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.TREES_PLAINS);
+        // Explicitly avoid adding water features
+        // No default carvers to avoid caves and ravines
+        // No lakes or springs
+        // Add only essential features like ores, vegetation
 
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder); // Keep ore generation
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
 
+        // Avoid features that could generate water (lakes, springs, etc.)
+        // No features that add water blocks
+
         return new Biome.BiomeBuilder()
-                .hasPrecipitation(true)
-                .downfall(0.8f)
-                .temperature(0.7f)
+                .hasPrecipitation(false)  // No rain or snow
+                .downfall(0f)
+                .temperature(10f)
                 .generationSettings(biomeBuilder.build())
                 .mobSpawnSettings(spawnBuilder.build())
                 .specialEffects((new BiomeSpecialEffects.Builder())
                         .waterColor(0x500c6b)
                         .waterFogColor(0x500c6b)
-                        .skyColor(0x1f1f1f)
+                        .skyColor(0x500c6b)
                         .grassColorOverride(0x8f8f8f)
                         .foliageColorOverride(0xd203fc)
                         .fogColor(0x1f1f1f)
-                        .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
                         .backgroundMusic(Musics.createGameMusic(ModSounds.KAMIZELKA_HURT_SOUND.getHolder().get())).build())
                 .build();
     }

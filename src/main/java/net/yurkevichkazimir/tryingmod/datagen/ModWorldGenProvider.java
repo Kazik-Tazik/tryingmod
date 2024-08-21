@@ -11,16 +11,19 @@ import net.yurkevichkazimir.tryingmod.worldgen.ModBiomeModifiers;
 import net.yurkevichkazimir.tryingmod.worldgen.ModConfiguredFeatures;
 import net.yurkevichkazimir.tryingmod.worldgen.ModPlacedFeatures;
 import net.yurkevichkazimir.tryingmod.worldgen.biome.ModBiomes;
+import net.yurkevichkazimir.tryingmod.worldgen.dimension.ModDimensions;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
+            .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
-            .add(Registries.BIOME, ModBiomes::boostrap);
+            .add(Registries.BIOME, ModBiomes::boostrap)
+            .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
 
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(tryingMod.MOD_ID));

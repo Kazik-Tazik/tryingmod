@@ -1,7 +1,7 @@
-// 1.20.1	2024-08-21T22:57:37.663882	Registries
+// 1.20.1	2024-08-22T17:43:06.9856016	Registries
 1165d9c6cef5cf33cb648a45a4958ad4bae7c095 data/tryingmod/dimension/francedim.json
 0f3709700b5f92fe52822f9237ffe3b7de539e8d data/tryingmod/dimension_type/francedim_type.json
 ed66a38aea94ff5a09ff5f015daee45ce621db55 data/tryingmod/forge/biome_modifier/add_chugunok_ore.json
-e4f2a65aab73f2577a4c90fcbd61225308c2bf53 data/tryingmod/worldgen/biome/france_biome.json
+bd54348e3249bef5831c880c63a6a3e63a2312da data/tryingmod/worldgen/biome/france_biome.json
 17a0e795e8a19060499d044b2417346b977aaa29 data/tryingmod/worldgen/configured_feature/chugunok_ore.json
 7a921871189c8a96f563d782ef29a71a32aa467c data/tryingmod/worldgen/placed_feature/chugunok_ore_placed.json

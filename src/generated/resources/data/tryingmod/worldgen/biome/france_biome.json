@@ -20,7 +20,24 @@
     [],
     [],
     [],
-    [],
+    [
+      {
+        "feature": {
+          "type": "tryingmod:fractal_cube",
+          "config": {}
+        },
+        "placement": [
+          {
+            "type": "minecraft:rarity_filter",
+            "chance": 100
+          },
+          {
+            "type": "minecraft:heightmap",
+            "heightmap": "WORLD_SURFACE_WG"
+          }
+        ]
+      }
+    ],
     [],
     [
       "minecraft:ore_coal_upper",
@@ -57,15 +74,15 @@
     "creature": [
       {
         "type": "tryingmod:zufik",
-        "maxCount": 5,
-        "minCount": 3,
-        "weight": 2
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 6
       },
       {
         "type": "tryingmod:binhli",
-        "maxCount": 4,
-        "minCount": 2,
-        "weight": 3
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 6
       }
     ],
     "misc": [],

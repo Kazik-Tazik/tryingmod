@@ -1,18 +1,26 @@
 package net.yurkevichkazimir.tryingmod.worldgen.biome;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.placement.VegetationPlacements;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.Musics;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.placement.RarityFilter;
 import net.yurkevichkazimir.tryingmod.entity.ModEntities;
 import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import net.yurkevichkazimir.tryingmod.tryingMod;
+import net.yurkevichkazimir.tryingmod.worldgen.feature.ModFeatures;
+
+import java.util.List;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> FRANCE_BIOME = ResourceKey.create(Registries.BIOME,
@@ -33,8 +41,10 @@ public class ModBiomes {
 
     public static Biome testBiome(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.ZUFIK.get(), 2, 3, 5));
-        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.BINHLI.get(), 3, 2, 4));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.ZUFIK.get(), 6, 1, 1));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(ModEntities.BINHLI.get(), 6, 1, 1));
+
+
 
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
@@ -43,10 +53,10 @@ public class ModBiomes {
         // No default carvers to avoid caves and ravines
         // No lakes or springs
         // Add only essential features like ores, vegetation
-
         BiomeDefaultFeatures.addDefaultOres(biomeBuilder); // Keep ore generation
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+        addFractalCubesFeature(biomeBuilder);
 
         // Avoid features that could generate water (lakes, springs, etc.)
         // No features that add water blocks
@@ -66,5 +76,24 @@ public class ModBiomes {
                         .fogColor(0x1f1f1f)
                         .backgroundMusic(Musics.createGameMusic(ModSounds.KAMIZELKA_HURT_SOUND.getHolder().get())).build())
                 .build();
+    }
+
+    private static void addFractalCubesFeature(BiomeGenerationSettings.Builder biomeBuilder) {
+        // Create the configured feature for the fractal cubes
+        ConfiguredFeature<NoneFeatureConfiguration, ?> fractalCubeConfiguredFeature = new ConfiguredFeature<>(
+                ModFeatures.FRACTAL_CUBE.get(), NoneFeatureConfiguration.INSTANCE
+        );
+
+        // Register the placed feature for the fractal cubes
+        PlacedFeature fractalCubePlacedFeature = new PlacedFeature(
+                Holder.direct(fractalCubeConfiguredFeature),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(100), // Control frequency
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE
+                )
+        );
+
+        // Add the fractal cube feature to the biome generation settings
+        biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, Holder.direct(fractalCubePlacedFeature));
     }
 }

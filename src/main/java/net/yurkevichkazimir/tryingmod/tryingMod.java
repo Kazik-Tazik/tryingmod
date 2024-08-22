@@ -5,8 +5,6 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -17,7 +15,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
 import net.yurkevichkazimir.tryingmod.block.entity.ModBlocksEntities;
 import net.yurkevichkazimir.tryingmod.effect.ModEffects;
@@ -35,9 +32,9 @@ import net.yurkevichkazimir.tryingmod.sound.ModSounds;
 import net.yurkevichkazimir.tryingmod.villager.ModVillagers;
 import net.yurkevichkazimir.tryingmod.worldgen.biome.ModTerrablender;
 import net.yurkevichkazimir.tryingmod.worldgen.biome.surface.ModSurfaceRules;
+import net.yurkevichkazimir.tryingmod.worldgen.feature.ModFeatures;
 import org.slf4j.Logger;
 import terrablender.api.SurfaceRuleManager;
-import terrablender.core.TerraBlender;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(tryingMod.MOD_ID)
@@ -74,6 +71,7 @@ public class tryingMod
         ModPotions.register(modEventBus);
 
         ModTerrablender.registerBiomes();
+        ModFeatures.FEATURES.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

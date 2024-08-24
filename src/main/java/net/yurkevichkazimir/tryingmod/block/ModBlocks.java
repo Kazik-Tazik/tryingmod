@@ -11,6 +11,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.yurkevichkazimir.tryingmod.block.custom.ModPortalBlock;
 import net.yurkevichkazimir.tryingmod.block.custom.PigCropBlock;
 import net.yurkevichkazimir.tryingmod.block.custom.PotatoExplosionMaker;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
@@ -72,6 +73,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> FRENCH_DIRT = registerBlock("french_dirt",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.MOSS)));
+
+    public static final RegistryObject<Block> FRANCE_PORTAL = registerBlock("france_portal",
+            () -> new ModPortalBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noLootTable().noOcclusion()));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {

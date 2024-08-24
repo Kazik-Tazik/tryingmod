@@ -49,17 +49,10 @@ public class ModBiomes {
         BiomeGenerationSettings.Builder biomeBuilder =
                 new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
 
-        // Explicitly avoid adding water features
-        // No default carvers to avoid caves and ravines
-        // No lakes or springs
-        // Add only essential features like ores, vegetation
-        BiomeDefaultFeatures.addDefaultOres(biomeBuilder); // Keep ore generation
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
         BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
         addFractalCubesFeature(biomeBuilder);
-
-        // Avoid features that could generate water (lakes, springs, etc.)
-        // No features that add water blocks
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false)  // No rain or snow
@@ -79,21 +72,18 @@ public class ModBiomes {
     }
 
     private static void addFractalCubesFeature(BiomeGenerationSettings.Builder biomeBuilder) {
-        // Create the configured feature for the fractal cubes
         ConfiguredFeature<NoneFeatureConfiguration, ?> fractalCubeConfiguredFeature = new ConfiguredFeature<>(
                 ModFeatures.FRACTAL_CUBE.get(), NoneFeatureConfiguration.INSTANCE
         );
 
-        // Register the placed feature for the fractal cubes
         PlacedFeature fractalCubePlacedFeature = new PlacedFeature(
                 Holder.direct(fractalCubeConfiguredFeature),
                 List.of(
-                        RarityFilter.onAverageOnceEvery(100), // Control frequency
+                        RarityFilter.onAverageOnceEvery(100),
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE
                 )
         );
 
-        // Add the fractal cube feature to the biome generation settings
         biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, Holder.direct(fractalCubePlacedFeature));
     }
 }

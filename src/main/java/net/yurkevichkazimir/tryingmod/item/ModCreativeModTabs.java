@@ -35,6 +35,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.COOKED_PORK_BLOCK.get());
                         pOutput.accept(ModBlocks.POTATO_EXPLOSION_MAKER.get());
                         pOutput.accept(ModBlocks.FRENCH_DIRT.get());
+                        pOutput.accept(ModBlocks.FRANCE_PORTAL.get());
                     })
                     .build());
 

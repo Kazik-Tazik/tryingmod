@@ -1,7 +1,8 @@
-// 1.20.1	2024-08-21T20:54:30.6197028	Block States: tryingmod
+// 1.20.1	2024-08-24T18:34:35.929647	Block States: tryingmod
 660f3cd76d88d789612713dabd51001ab4cc57d1 assets/tryingmod/blockstates/chugunok_block.json
 939459b2b607e76c1f444e3887f272117f21d6cf assets/tryingmod/blockstates/chugunok_ore.json
 1bec02d9102dbf0932e4f32bfc22265f419e7f3d assets/tryingmod/blockstates/cooked_pork_block.json
+bd24d246156e03015408e5f58395d1ca1f9aeb7f assets/tryingmod/blockstates/france_portal.json
 10a5dd7b83811664c95d7718c5da74dc85e084bf assets/tryingmod/blockstates/french_dirt.json
 801c40eeca7e94903cfe5059a3c413bdb0e39e84 assets/tryingmod/blockstates/pig_crop.json
 f193936ba7bb6295f3c2c0d7f9e4a05e0824640b assets/tryingmod/blockstates/pork_block.json
@@ -18,6 +19,7 @@ a14b676b05f30e1c3d5699a37e5d1015ed5783cd assets/tryingmod/blockstates/pork_wall.
 3c0daece68969e3a6323ae791c2bfc23752225cd assets/tryingmod/models/block/chugunok_block.json
 4d9549ada79d3ba3144a3fa6e41ba329859e9157 assets/tryingmod/models/block/chugunok_ore.json
 6d46e7d30e1f1188da7f120f493871ee8165b4f4 assets/tryingmod/models/block/cooked_pork_block.json
+a18ecfa5fb7262f77333fc50e931120fbfdf90d8 assets/tryingmod/models/block/france_portal.json
 cd19ff093f10ecac0491888ed56c843adbf936f3 assets/tryingmod/models/block/french_dirt.json
 4bd65e8d1992abb8475cb1012f7a9f387da3f5b8 assets/tryingmod/models/block/pig_crop_stage0.json
 671af45caadf83edcdbb5a4fe3b42290a71b2973 assets/tryingmod/models/block/pig_crop_stage1.json
@@ -58,5 +60,6 @@ f261491d4a863c94c7b1f750ca6b83ffcca8be86 assets/tryingmod/models/block/pork_trap
 0d8d03745c5a5848574cccf8ab21754a957c3918 assets/tryingmod/models/item/chugunok_block.json
 85f325a2c00bedb857a3df669e1e04fcf576186d assets/tryingmod/models/item/chugunok_ore.json
 66facc94600a27d5006fd2b0e40c7f67aff4033a assets/tryingmod/models/item/cooked_pork_block.json
+7173644f539a3bdce65e95ce28ed7aba031c5490 assets/tryingmod/models/item/france_portal.json
 dd8479ea3984e75837e1c31daf2163d7618fa11f assets/tryingmod/models/item/french_dirt.json
 f312e96811e11c4833eb9ffef2f9c4269999b50d assets/tryingmod/models/item/pork_block.json

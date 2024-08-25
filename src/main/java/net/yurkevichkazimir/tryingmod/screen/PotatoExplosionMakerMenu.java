@@ -33,8 +33,8 @@ public class PotatoExplosionMakerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
-            this.addSlot(new SlotItemHandler(iItemHandler, 0, 46, 35));
-            this.addSlot(new SlotItemHandler(iItemHandler, 1, 114, 35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 74, 35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 142, 35));
         });
 
         addDataSlots(data);

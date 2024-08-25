@@ -20,7 +20,7 @@ public class PotatoExplosionMakerScreen extends AbstractContainerScreen<PotatoEx
     @Override
     protected void init() {
         super.init();
-        this.inventoryLabelY = 10000;
+        //this.inventoryLabelY = 10000;
         this.titleLabelY = 10000;
     }
 
@@ -39,7 +39,7 @@ public class PotatoExplosionMakerScreen extends AbstractContainerScreen<PotatoEx
 
     private void renderProgressArrow(GuiGraphics guiGraphics, int x, int y) {
         if(menu.isCrafting()) {
-            guiGraphics.blit(TEXTURE, x + 76, y + 35, 176, 0, menu.getScaledProgress(), 24);
+            guiGraphics.blit(TEXTURE, x + 104, y + 35, 176, 0, menu.getScaledProgress(), 24);
         }
     }
 

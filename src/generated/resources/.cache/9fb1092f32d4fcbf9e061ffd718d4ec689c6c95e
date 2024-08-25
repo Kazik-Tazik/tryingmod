@@ -1,9 +1,10 @@
-// 1.20.1	2024-08-19T16:42:17.3877597	Recipes
+// 1.20.1	2024-08-25T18:16:56.738901	Recipes
 e1e232fb4929e71720d114244acd70b1c1711162 data/minecraft/advancements/recipes/food/cooked_porkchop.json
 85d7f36eaa1821bb619c63578cf0c7cb07792ff6 data/minecraft/advancements/recipes/food/porkchop.json
 cb7516645e803d8407ae7ee72b7118c03470fb7d data/minecraft/recipes/cooked_porkchop.json
 9111849d030b907f28dabdcf3c0512b560582346 data/minecraft/recipes/porkchop.json
 97082abad0eb818916964f246bfb2418ab331ddd data/tryingmod/advancements/recipes/building_blocks/cooked_pork_block.json
+8d7ab1195148d7dec41c5f06118334b4a6a97142 data/tryingmod/advancements/recipes/building_blocks/france_portal.json
 dcc5e58a1a3347fd23284f0c0f0cc109601da662 data/tryingmod/advancements/recipes/building_blocks/pork_block.json
 012a202fd06951ebcc4534f323b6d5b7d534adce data/tryingmod/advancements/recipes/combat/french_staff_item.json
 61e010e5469e96c5020e09c7c5fd9ae2b68455fb data/tryingmod/advancements/recipes/food/draniki.json
@@ -18,8 +19,9 @@ b65cf5ca386dc2791ba473aa82272341cfb439a9 data/tryingmod/advancements/recipes/foo
 ceef736451201b9881bc871434bd3904841a7060 data/tryingmod/recipes/chugunok_stick.json
 aa3820d63901fff8f5041c2e458031306e7017e9 data/tryingmod/recipes/cooked_pork_block.json
 cd10320ad889acc5205fb37a3858cf1377f0ef7c data/tryingmod/recipes/draniki.json
+01639005fdb4b8ccbfce6d0a0905bdd85782fd0d data/tryingmod/recipes/france_portal.json
 172e05bcbd50c689c14896fce71296748a23cfa4 data/tryingmod/recipes/french_staff_item.json
 14b26649653eace0d8dd1223be37679a40dc3137 data/tryingmod/recipes/pig_maker_item.json
 b309cd4444bc4e655d1173934cd11d25e0e8fb62 data/tryingmod/recipes/pig_seeds.json
 a4b77cfd8c35a7613f8639499b5ec8d172696172 data/tryingmod/recipes/pork_block.json
-357c9484b2ddc6fa405132ace3370838435a5486 data/tryingmod/recipes/potato_explosion_maker.json
+57c2addaae73a2f8b79fd199275c1c7c4ad5b25b data/tryingmod/recipes/potato_explosion_maker.json

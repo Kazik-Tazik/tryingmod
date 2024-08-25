@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.yurkevichkazimir.tryingmod.block.ModBlocks;
 import net.yurkevichkazimir.tryingmod.item.ModItem;
@@ -118,7 +119,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("S S")
                 .define('R', Items.GOLD_INGOT)
                 .define('N', Items.NETHERITE_INGOT)
-                .define('S', ModItem.CHUGUNOK.get())
+                .define('S', ModItem.CHUGUNOK_STICK.get())
                 .define('T', Items.TNT)
                 .unlockedBy(getHasName(Items.NETHERITE_INGOT), has(Items.NETHERITE_INGOT))
                 .save(pWriter);
@@ -133,6 +134,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', ModItem.BINHLI_ANTENNA.get())
                 .define('G', ModItem.ZOPSIK_EYE.get())
                 .unlockedBy(getHasName(ModItem.ZOPSIK_EYE.get()), has(ModItem.ZOPSIK_EYE.get()))
+                .save(pWriter);
+
+        //France Portal
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FRANCE_PORTAL.get(), 1)
+                .pattern("SSS")
+                .pattern("CDC")
+                .pattern("SSS")
+                .define('S', Blocks.SMOOTH_BASALT)
+                .define('C', ModItem.CHUGUNOK.get())
+                .define('D', Items.DIAMOND)
+                .unlockedBy(getHasName(ModItem.CHUGUNOK.get()), has(ModItem.CHUGUNOK.get()))
                 .save(pWriter);
     }
 

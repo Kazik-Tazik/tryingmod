@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "item": "tryingmod:chugunok"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "minecraft:smooth_basalt"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "CDC",
+    "SSS"
+  ],
+  "result": {
+    "item": "tryingmod:france_portal"
+  },
+  "show_notification": true
+}

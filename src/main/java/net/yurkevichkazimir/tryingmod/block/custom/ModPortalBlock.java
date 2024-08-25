@@ -23,7 +23,6 @@ public class ModPortalBlock extends Block {
     }
 
 
-
     @Override
     public void onProjectileHit(Level pLevel, BlockState pState, BlockHitResult pHit, Projectile pProjectile) {
       // Check if the projectile is an instance of your custom carrot projectile
@@ -51,4 +50,6 @@ public class ModPortalBlock extends Block {
             }
         }
     }
+
+
 }

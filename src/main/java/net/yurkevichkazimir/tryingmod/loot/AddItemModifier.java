@@ -23,7 +23,7 @@ public class AddItemModifier extends LootModifier {
     private final Item item;
 
 
-    public AddItemModifier(LootItemCondition[] conditionsIn, Item item) {
+    public AddItemModifier(LootItemCondition[] conditionsIn, @NotNull Item item) {
         super(conditionsIn);
         this.item = item;
     }

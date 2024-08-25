@@ -83,6 +83,18 @@
         "maxCount": 1,
         "minCount": 1,
         "weight": 6
+      },
+      {
+        "type": "tryingmod:kamizelka",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 6
+      },
+      {
+        "type": "tryingmod:zopsik",
+        "maxCount": 1,
+        "minCount": 1,
+        "weight": 6
       }
     ],
     "misc": [],

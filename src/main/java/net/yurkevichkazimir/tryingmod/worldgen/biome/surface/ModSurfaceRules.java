@@ -12,7 +12,7 @@ public class ModSurfaceRules {
     public static SurfaceRules.RuleSource makeRules() {
         return SurfaceRules.sequence(
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.FRANCE_BIOME),
-                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, FRENCH_DIRT))  // Apply FRENCH_DIRT on the surface
+                        SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, FRENCH_DIRT)) // Apply FRENCH_DIRT on the surface
         );
     }
 

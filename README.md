@@ -4,6 +4,7 @@
 **Minecraft Version:** 1.20.1  
 **Forge Mod**  
 **Requires:** [TerraBlender](https://www.curseforge.com/minecraft/mc-mods/terrablender)
+
 **CurseForge** [Kamizelka's Bizzare World Mod](https://www.curseforge.com/minecraft/mc-mods/kamizelkas-bizarre-world-mod)
 
 ---
